@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+//Program name : Write a Java method to check whether a string is a valid password.<br/>
+<br/>
+class Func <br/>
+{<br/>
+
+    static String validatingPassword(String s) {<br/>
+        int cap = 0, smLetter = 0, digit = 0;<br/>
+<br/>
+        int len = 0;<br/>
+<br/>
+        for (int i = 0; i < s.length(); i++) {<br/>
+
+            len++;<br/>
+<br/>
+            char c = s.charAt(i);<br/>
+<br/>
+            if (c > 46 && c < 58) {<br/>
+                digit++;<br/>
+            }<br/>
+<br/>
+            if (c > 64 && c < 91) {<br/>
+                cap++;<br/>
+            }<br/>
+<br/>
+            if (c > 96 && c < 123) {<br/>
+                smLetter++;<br/>
+            }<br/>
+<br/>
+        }<br/>
+        String result = "";<br/>
+        if (cap < 2) {<br/>
+            result += "Password should contain at least  two capital letters.";<br/>
+        }<br/>
+<br/>
+        if (digit < 2) {<br/>
+            result += "\nPassword should contain at least 1 digit ...";<br/>
+        }<br/>
+<br/>
+        if (len < 8) {<br/>
+            result += "\nPassword should be minimum 8 characters";<br/>
+        }<br/>
+<br/>
+        if (cap >= 2 && digit >= 2 && len >= 8) {<br/>
+           result+="Password is valid...";<br/>
+        }<br/>
+<br/>
+        else{<br/>
+            result+="\nPassword is not valid...";<br/>
+        }<br/>
+<br/>
+        return result;<br/>
+    }<br/>
+<br/>
+    public static void main(String[] args) {<br/>
+        String s = "HHellolodev45";<br/>
+
+        System.out.println(validatingPassword(s));<br/>
+<br/>
+    }<br/>
+
+}  
+                      
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./funimg/pro7.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

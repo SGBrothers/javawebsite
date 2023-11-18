@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        import java.util.Arrays;<br/>
+<br/>
+                        class program3 {<br/>
+                          private static final int ARRAY_SIZE = 400;<br/>
+                          private static final int NUM_THREADS = 4;<br/>
+                        <br/>
+                          public static void main(String[] args) {<br/>
+                            int[] array = createArray();<br/>
+                            System.out.println("Before sorting: " + Arrays.toString(array));<br/>
+                        <br/>
+                            Thread[] threads = new Thread[NUM_THREADS];<br/>
+                            int segmentSize = ARRAY_SIZE / NUM_THREADS;<br/>
+                        <br/>
+                            for (int i = 0; i < NUM_THREADS; i++) {<br/>
+                              int startIndex = i * segmentSize;
+                              int endIndex = (i == NUM_THREADS - 1) ? ARRAY_SIZE - 1 : (startIndex + segmentSize - 1);<br/>
+                              threads[i] = new Thread(new SortTask(array, startIndex, endIndex));<br/>
+                              threads[i].start();<br/>
+                            }<br/>
+                        <br/>
+                            for (Thread thread: threads) {<br/>
+                              try {<br/>
+                                thread.join();<br/>
+                              } catch (InterruptedException e) {<br/>
+                                e.printStackTrace();<br/>
+                              }<br/>
+                            }<br/>
+                        <br/>
+                            mergeSort(array, 0, ARRAY_SIZE - 1);<br/>
+                        <br/>
+                            System.out.println("After sorting: " + Arrays.toString(array));<br/>
+                          }<br/>
+                        <br/>
+                          private static int[] createArray() {<br/>
+                            int[] array = new int[ARRAY_SIZE];<br/>
+                            for (int i = 0; i < ARRAY_SIZE; i++) {<br/>
+                              array[i] = (int)(Math.random() * 400); // Generate random numbers between 0 and 400<br/>
+                            }<br/>
+                            return array;<br/>
+                          }<br/>
+                        <br/>
+                          private static void mergeSort(int[] array, int left, int right) {<br/>
+                            if (left < right) {<br/>
+                              int mid = (left + right) / 2;<br/>
+                              mergeSort(array, left, mid);<br/>
+                              mergeSort(array, mid + 1, right);<br/>
+                              merge(array, left, mid, right);<br/>
+                            }<br/>
+                          }<br/>
+                        <br/>
+                          private static void merge(int[] array, int left, int mid, int right) {<br/>
+                            int[] temp = new int[right - left + 1];<br/>
+                            int i = left, j = mid + 1, k = 0;<br/>
+                        <br/>
+                            while (i <= mid && j <= right) {<br/>
+                              if (array[i] <= array[j]) {<br/>
+                                temp[k++] = array[i++];<br/>
+                              } else {<br/>
+                                temp[k++] = array[j++];<br/>
+                              }<br/>
+                            }<br/>
+                        <br/>
+                            while (i <= mid) {<br/>
+                              temp[k++] = array[i++];<br/>
+                            }<br/>
+                        <br/>
+                            while (j <= right) {<br/>
+                              temp[k++] = array[j++];<br/>
+                            }<br/>
+                        <br/>
+                            System.arraycopy(temp, 0, array, left, temp.length);<br/>
+                          }<br/>
+                        <br/>
+                          static class SortTask implements Runnable {<br/>
+                            private int[] array;<br/>
+                            private int startIndex;<br/>
+                            private int endIndex;<br/>
+                        <br/>
+                            public SortTask(int[] array, int startIndex, int endIndex) {<br/>
+                              this.array = array;<br/>
+                              this.startIndex = startIndex;<br/>
+                              this.endIndex = endIndex;<br/>
+                            }<br/>
+                        <br/>
+                            @Override<br/>
+                            public void run() {<br/>
+                              Arrays.sort(array, startIndex, endIndex + 1);<br/>
+                            }<br/>
+                          }<br/>
+                        }
+                        
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./multithreadinimg/pro3.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

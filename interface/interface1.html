@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                        <p>
+                            // Shape interface<br/>
+                            interface Shape {<br/>
+                                double getArea();<br/>
+                            }<br/>
+                            <br/>
+                            // Rectangle class implementing Shape<br/>
+                            class Rectangle implements Shape {<br/>
+                                private double length;<br/>
+                                private double width;<br/>
+                            <br/>
+                                public Rectangle(double length, double width) {<br/>
+                                    this.length = length;<br/>
+                                    this.width = width;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double getArea() {<br/>
+                                    return length * width;<br/>
+                                }<br/>
+                            }<br/>
+                            <br/>
+                            // Circle class implementing Shape<br/>
+                            class Circle implements Shape {<br/>
+                                private double radius;<br/>
+                            <br/>
+                                public Circle(double radius) {<br/>
+                                    this.radius = radius;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double getArea() {<br/>
+                                    return Math.PI * radius * radius;<br/>
+                                }<br/>
+                            }<br/>
+                            <br/>
+                            // Triangle class implementing Shape<br/>
+                            class Triangle implements Shape {<br/>
+                                private double base;<br/>
+                                private double height;<br/>
+                            <br/>
+                                public Triangle(double base, double height) {<br/>
+                                    this.base = base;<br/>
+                                    this.height = height;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double getArea() {<br/>
+                                    return 0.5 * base * height;<br/>
+                                }<br/>
+                            }<br/>
+                            <br/>
+                            // Main class to test the Shape interface and its implementations<br/>
+                             class ShapeTest <br/>
+                            {<br/>
+                                public static void main(String[] args) {<br/>
+                                    // Test Rectangle<br/>
+                                    Rectangle rectangle = new Rectangle(5, 8);<br/>
+                                    System.out.println("Area of Rectangle: " + rectangle.getArea());<br/>
+                            <br/>
+                                    // Test Circle<br/>
+                                    Circle circle = new Circle(4);<br/>
+                                    System.out.println("Area of Circle: " + circle.getArea());<br/>
+                            <br/>
+                                    // Test Triangle<br/>
+                                    Triangle triangle = new Triangle(6, 10);<br/>
+                                    System.out.println("Area of Triangle: " + triangle.getArea());<br/>
+                                }<br/>
+                            }
+                         </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./interfaceimg/pro1.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

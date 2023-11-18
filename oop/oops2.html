@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        class Dog {<BR/>
+                            private String name;<BR/>
+                            private String breed;<BR/>
+                        <BR/>
+                            // Constructor<BR/>
+                            public Dog(String name, String breed) {<BR/>
+                                this.name = name;<BR/>
+                                this.breed = breed;<BR/>
+                            }<BR/>
+                        <BR/>
+                            // Getter methods<BR/>
+                            public String getName() {<BR/>
+                                return name;<BR/>
+                            }<BR/>
+                        <BR/>
+                            public String getBreed() {<BR/>
+                                return breed;<BR/>
+                            }<BR/>
+                        <BR/>
+                            // Setter methods<BR/>
+                            public void setName(String name) {<BR/>
+                                this.name = name;<BR/>
+                            }<BR/>
+                        <BR/>
+                            public void setBreed(String breed) {<BR/>
+                                this.breed = breed;<BR/>
+                            }<BR/>
+                        }<BR/>
+                        <BR/>
+                         class pro2 {<BR/>
+                            public static void main(String[] args) {<BR/>
+                                // Creating two instances of the Dog class<BR/>
+                                Dog dog1 = new Dog("Buddy", "Labrador");<BR/>
+                                Dog dog2 = new Dog("Max", "German Shepherd");<BR/>
+                        <BR/>
+                                // Printing initial values<BR/>
+                                System.out.println("Initial Values:");<BR/>
+                                System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());<BR/>
+                                System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());<BR/>
+                        <BR/>
+                                // Modifying attributes using setter methods<BR/>
+                                dog1.setName("Charlie");<BR/>
+                                dog2.setBreed("Golden Retriever");<BR/>
+                        <BR/>
+                                // Printing updated values<BR/>
+                                System.out.println("\nUpdated Values:");<BR/>
+                                System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());<BR/>
+                                System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());<BR/>
+                            }<BR/>
+                        }
+                        
+                        
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro2.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

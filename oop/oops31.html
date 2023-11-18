@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        //Write a Java program to create a class called Car with private instance variables company_name, model_name, year, and mileage. <br/>Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.<br/>
+<br/>
+                        class Car {<br/>
+                            private String company_name;<br/>
+                            private String model_name;<br/>
+                            private int year;<br/>
+                            private double mileage;<br/>
+                        
+                            <br/>
+                            public Car(String company_name, String model_name, int year, double mileage) {<br/>
+                                this.company_name = company_name;<br/>
+                                this.model_name = model_name;<br/>
+                                this.year = year;<br/>
+                                this.mileage = mileage;<br/>
+                            }<br/>
+                        <br/>
+                          <br/> 
+                            public String getCompany_name() {<br/>
+                                return company_name;<br/>
+                            }<br/>
+                        <br/>
+                            <br/>
+                            public void setCompany_name(String company_name) {<br/>
+                                this.company_name = company_name;<br/>
+                            }<br/>
+                        <br/>
+                             <br/>
+                            public String getModel_name() {<br/>
+                                return model_name;<br/>
+                            }<br/>
+                        <br/>
+                           <br/> 
+                            public void setModel_name(String model_name) {<br/>
+                                this.model_name = model_name;<br/>
+                            }<br/>
+                        <br/>
+                            <br/>
+                            public int getYear() {<br/>
+                                return year;<br/>
+                            }<br/>
+                        <br/>
+                            <br/>
+                            public void setYear(int year) {<br/>
+                                this.year = year;<br/>
+                            }<br/>
+                        <br/>
+                            <br/>
+                            public double getMileage() {<br/>
+                                return mileage;<br/>
+                            }<br/>
+                        <br/>
+                            public static void main(String[] args) {<br/>
+                               <br/>
+                                Car myCar = new Car("Toyota", "Camry", 2022, 30.5);<br/>
+                        <br/>
+                               <br/>
+                                System.out.println("Company: " + myCar.getCompany_name());<br/>
+                                System.out.println("Model: " + myCar.getModel_name());<br/>
+                                System.out.println("Year: " + myCar.getYear());<br/>
+                                System.out.println("Mileage: " + myCar.getMileage());<br/>
+                        <br/>
+                              <br/>
+                                myCar.setCompany_name("Honda");<br/>
+                                myCar.setModel_name("Civic");<br/>
+                                myCar.setYear(2023);<br/>
+                        <br/>
+                                System.out.println("Updated Company: " + myCar.getCompany_name());<br/>
+                                System.out.println("Updated Model: " + myCar.getModel_name());<br/>
+                                System.out.println("Updated Year: " + myCar.getYear());<br/>
+                            }<br/>
+                        }
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro31.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

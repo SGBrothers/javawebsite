@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                      <p>
+                        // Write a Java program to throw the SQL Query, insert, delete, update, if not successful then throw an exception<br/>
+<br/>
+                        import java.sql.DriverManager;<br/>
+                        import java.sql.SQLException;<br/>
+                        import java.sql.Statement;<br/>
+                        import java.sql.Connection;<br/>
+                        class Main {<br/>
+                            private static Connection con;<br/>
+                            private static String query;<br/>
+                            Main(){<br/>
+                                try<br/>
+                                {<br/>
+                                    Class.forName("com.mysql.jdbc.Driver");<br/>
+                                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prodb","root","");<br/>
+                                }<br/>
+                                catch(ClassNotFoundException cnf_e)<br/>
+                                {<br/>
+                                    System.out.println("Error in finding class");<br/>
+                                }<br/>
+                                catch(SQLException sql_e)<br/>
+                                {<br/>
+                                    System.out.println(sql_e.toString());<br/>
+                                }<br/>
+                            }<br/>
+                            public static void main(String[] args) {<br/>
+                                new Main();<br/>
+                                int rows_affected_insert,rows_affected_update,rows_affected_delete;<br/>
+                                try<br/>
+                                {<br/>
+                                        Statement  ps = con.createStatement();<br/>
+                        <br/>
+                                        query = "insert into student (roll_no) values (1234)";<br/>
+                                        rows_affected_insert = ps.executeUpdate(query);<br/>
+                        <br/>
+                                        query = "UPDATE student SET roll_no = 4321 WHERE roll_no = 1234";<br/>
+                                        rows_affected_update = ps.executeUpdate(query);<br/>
+                        <br/>
+                                        query = "DELETE FROM student WHERE roll_no = 7002";<br/>
+                                        rows_affected_delete = ps.executeUpdate(query);<br/>
+                        <br/>
+                                        System.out.println("Rows inserted : "+rows_affected_insert);<br/>
+                                        System.out.println("Rows updated: "+rows_affected_update);<br/>
+                                        System.out.println("Rows deleted: "+rows_affected_delete);<br/>
+                                }<br/>
+                                catch(SQLException sqle)<br/>
+                                {<br/>
+                                                System.out.println(sqle.toString());<br/>
+                                                sqle.printStackTrace();<br/>
+                                }<br/>
+                                finally{<br/>
+                                    if(con!=null)<br/>
+                                    {<br/>
+                                       try<br/>
+                                       {<br/>
+                                            con.close();<br/>
+                                       } <br/>
+                                       catch(SQLException s)<br/>
+                                       {<br/>
+                                            s.printStackTrace();<br/>
+                                       }<br/>
+                                    }<br/>
+                                }<br/>
+                            }
+                        }
+                        
+
+                      </p>
+
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./exceptionimg/pro10.jpg" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

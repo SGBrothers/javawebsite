@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>COOKIES</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Cookies in PHP</h1>
+                        <p>
+                            Cookies are small pieces of data that can be stored on a user's device by a web server. They
+                            are commonly used to track user sessions, personalize content, and remember user
+                            preferences.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Setting Cookies</h2>
+                        <p>
+                            You can set cookies in PHP using the <strong>setcookie()</strong> function. Cookies have a
+                            name, value, and
+                            optional attributes such as expiration time and path. Syntax for setting cookie is :
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            setcookie(name, value, expire, path, domain, secure, httponly);
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            For Example :-
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            setcookie("username", "john_doe", time() + 7 * 24 * 3600, "/");
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>To retrieve cookies in PHP, you can use the <strong>$_COOKIE </strong>super global variable.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            if (isset($_COOKIE["username"]))<br />
+                            {<br />
+                            $username = $_COOKIE["username"];<br />
+                            echo "Welcome back, $username!";<br />
+                            } <br />
+                            else {<br />
+                            echo "Welcome, guest!";<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p> Output:- </p>
+                        <p>If Cookie is not set then, </p>
+                    </div>
+                    <div class="output">
+                        <p>Welcome, guest !</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            If Cookie is set then,
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Welcome back, Sourav Kumar !
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Managing Cookies</h2>
+                        <p>
+                            Cookies can be modified or deleted using the <strong>setcookie()</strong> function with
+                            updated values or by
+                            setting an expiration time in the past.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Update a cookie's value <br />
+                            setcookie("username", "new_value", time() + 7 * 24 * 3600);
+                        </p>
+                        <br><br>
+                        <p>
+                            // Delete a cookie by setting an expiration time in the past<br />
+                            setcookie("username", "", time() - 3600, "/");
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            Welcome back , new_value !
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Example</h2>
+                    </div>
+                    <div class="example">
+                        &lt;?php<br />
+
+                        if(isset($_REQUEST["email"]))<br />
+                        {<br />
+                        $cookie_name="useremail";<br />
+                        $cookie_value=$_REQUEST["email"];<br />
+                        $cookie_time=time()+60*60*24*5;<br />
+                        setCookie($cookie_name,$cookie_value,<br />$cookie_time);<br />
+                        }<br />
+                        ?><br />
+                        &lt;!DOCTYPE html><br />
+                        &lt;html lang="en"><br />
+                        &lt;head><br />
+                        &lt;meta charset="UTF-8"><br />
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"><br />
+                        &lt;title>cookie&lt;/title><br />
+                        &lt;/head><br />
+                        &lt;body><br />
+                        &lt;?php<br />
+                        if(isset($_COOKIE["useremail"]))<br />
+                        {<br />
+                        echo "the value of useremail will be :- ".$_COOKIE["useremail"];<br />
+                        }<br />
+                        else<br />
+                        {<br />
+                        ?><br />
+                        &lt;form action="cookie.php" method="POST"><br />
+                        &lt;input type="email" name="email" placeholder="Enter your email id"><br />
+                        &lt;input type="submit" value="submit"><br />
+                        &lt;/form><br />
+                        &lt;?php<br />
+                        }<br />
+                        ?><br />
+                        &lt;/body><br />
+                        &lt;/html>
+                    </div>
+                    <div class="desc">
+                        <p>Output :- </p>
+                    </div>
+                    <div class="image">
+                        <img src="image/cookie1.png" alt="cookie" loading="lazy">
+                    </div>
+                    <div class="image">
+                        <img src="image/cookie2.png" alt="cookie" loading="lazy">
+                    </div>
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Cookies play a crucial role in web development, enabling websites to remember user
+                            preferences and maintain user sessions. Understanding how to set, retrieve, and manage
+                            cookies in PHP is essential for building interactive and personalized web applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

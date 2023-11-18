@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+               <p>
+                import java.applet.Applet;<br/>
+                import java.awt.*;<br/>
+                import java.awt.event.ActionEvent;<br/>
+                import java.awt.event.ActionListener;<br/>
+                import javax.swing.JFrame;<br/>
+                <br/>
+                 class ColorChangeApplet extends Applet implements ActionListener {
+                    Color[] colors = {Color.red, Color.green, Color.blue};<br/>
+                    int colorIndex = 0;<br/>
+                <br/>
+                    public void init() {<br/>
+                        // Create and add buttons<br/>
+                        Button redButton = new Button("Red");<br/>
+                        redButton.addActionListener(this);<br/>
+                        add(redButton);<br/>
+                <br/>
+                        Button greenButton = new Button("Green");<br/>
+                        greenButton.addActionListener(this);<br/>
+                        add(greenButton);<br/>
+                <br/>
+                        Button blueButton = new Button("Blue");<br/>
+                        blueButton.addActionListener(this);<br/>
+                        add(blueButton);<br/>
+                    }<br/>
+                <br/>
+                    public void paint(Graphics g) {<br/>
+                        g.setColor(colors[colorIndex]);<br/>
+                        g.fillRect(0, 0, getWidth(), getHeight());<br/>
+                    }<br/>
+                <br/>
+                    public void actionPerformed(ActionEvent e) {<br/>
+                        Button button = (Button) e.getSource();<br/>
+                <br/>
+                        if (button.getLabel().equals("Red")) {<br/>
+                            colorIndex = 0;<br/>
+                        } else if (button.getLabel().equals("Green")) {<br/>
+                            colorIndex = 1;<br/>
+                        } else if (button.getLabel().equals("Blue")) {<br/>
+                            colorIndex = 2;<br/>
+                        }<br/>
+                <br/>
+                        repaint();<br/>
+                    }<br/>
+                <br/>
+                    public static void main(String[] args) {<br/>
+                        JFrame frame = new JFrame("Color Change Applet");<br/>
+                        ColorChangeApplet applet = new ColorChangeApplet();<br/>
+                        applet.setSize(400, 300);<br/>
+                        frame.add(applet);<br/>
+                <br/>
+                        frame.pack();<br/>
+                        frame.setVisible(true);<br/>
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br/>
+                    }<br/>
+                }
+               </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./deligationimg/pro17.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                <p>
+                    
+//Write a Java program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). <br/>Create subclasses //Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape<br/>
+
+<br/>
+
+abstract class Shape3D {<br/>
+    <br/>
+    public abstract double calculateVolume();<br/>
+<br/>
+    
+    public abstract double calculateSurfaceArea();<br/>
+}<br/>
+<br/>
+class Sphere extends Shape3D {<br/>
+    private double radius;
+
+    public Sphere(double radius) {<br/>
+        this.radius = radius;<br/>
+    }<br/>
+<br/>
+  <br/>
+    public double calculateVolume() {<br/>
+        return (4.0 / 3.0) * Math.PI * Math.pow(radius, 3)<br/>;
+    }<br/>
+<br/>
+  <br/>
+    public double calculateSurfaceArea() {<br/>
+        return 4 * Math.PI * Math.pow(radius, 2);<br/>
+    }<br/>
+}<br/>
+<br/>
+class Cube extends Shape3D {<br/>
+    private double sideLength;<br/>
+<br/>
+    public Cube(double sideLength) {<br/>
+        this.sideLength = sideLength;<br/>
+    }<br/>
+<br/>
+    public double calculateVolume() {<br/>
+        return Math.pow(sideLength, 3);<br/>
+    }<br/>
+<br/>
+    public double calculateSurfaceArea() {<br/>
+        return 6 * Math.pow(sideLength, 2);<br/>
+    }<br/>
+}<br/>
+<br/>
+ class Shape3DExample {<br/>
+    public static void main(String[] args) {<br/>
+        Sphere sphere = new Sphere(5.0);<br/>
+        Cube cube = new Cube(4.0);<br/>
+<br/>
+        System.out.println("Sphere Volume: " + sphere.calculateVolume());<br/>
+        System.out.println("Sphere Surface Area: " + sphere.calculateSurfaceArea());<br/>
+<br/>
+        System.out.println("Cube Volume: " + cube.calculateVolume());<br/>
+        System.out.println("Cube Surface Area: " + cube.calculateSurfaceArea());<br/>
+    }<br/>
+}
+                </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./inheritanceimg/pro20.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

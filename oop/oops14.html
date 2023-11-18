@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        class Student {<br/>
+                            private String name;<br/>
+                            private int grade;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Student(String name, int grade) {<br/>
+                                this.name = name;<br/>
+                                this.grade = grade;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getName() {<br/>
+                                return name;<br/>
+                            }<br/>
+                        <br/>
+                            public int getGrade() {<br/>
+                                return grade;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Teacher {<br/>
+                            private String name;<br/>
+                            private String subject;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Teacher(String name, String subject) {<br/>
+                                this.name = name;<br/>
+                                this.subject = subject;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getName() {<br/>
+                                return name;<br/>
+                            }<br/>
+                        <br/>
+                            public String getSubject() {<br/>
+                                return subject;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class School {<br/>
+                            private Student[] students;<br/>
+                            private Teacher[] teachers;<br/>
+                            private String[] classes;<br/>
+                            private int numStudents;<br/>
+                            private int numTeachers;<br/>
+                            private int numClasses;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public School(int maxStudents, int maxTeachers, int maxClasses) {<br/>
+                                students = new Student[maxStudents];<br/>
+                                teachers = new Teacher[maxTeachers];<br/>
+                                classes = new String[maxClasses];<br/>
+                                numStudents = 0;<br/>
+                                numTeachers = 0;<br/>
+                                numClasses = 0;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a student<br/>
+                            public void addStudent(Student student) {<br/>
+                                if (numStudents < students.length) {<br/>
+                                    students[numStudents] = student;<br/>
+                                    numStudents++;<br/>
+                                    System.out.println("Student added: " + student.getName());<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot add more students. School is full.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to remove a student<br/>
+                            public void removeStudent(String studentName) {<br/>
+                                boolean found = false;<br/>
+                                for (int i = 0; i < numStudents; i++) {<br/>
+                                    if (students[i].getName().equalsIgnoreCase(studentName)) {<br/>
+                                        found = true;<br/>
+                                        System.out.println("Student removed: " + students[i].getName());<br/>
+                                        for (int j = i; j < numStudents - 1; j++) {<br/>
+                                            students[j] = students[j + 1];<br/>
+                                        }<br/>
+                                        students[numStudents - 1] = null;<br/>
+                                        numStudents--;<br/>
+                                        break;<br/>
+                                    }<br/>
+                                }<br/>
+                                if (!found) {<br/>
+                                    System.out.println("Student not found: " + studentName);<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a teacher<br/>
+                            public void addTeacher(Teacher teacher) {<br/>
+                                if (numTeachers < teachers.length) {<br/>
+                                    teachers[numTeachers] = teacher;<br/>
+                                    numTeachers++;<br/>
+                                    System.out.println("Teacher added: " + teacher.getName());<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot add more teachers. School is full.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to remove a teacher<br/>
+                            public void removeTeacher(String teacherName) {<br/>
+                                boolean found = false;<br/>
+                                for (int i = 0; i < numTeachers; i++) {<br/>
+                                    if (teachers[i].getName().equalsIgnoreCase(teacherName)) {<br/>
+                                        found = true;<br/>
+                                        System.out.println("Teacher removed: " + teachers[i].getName());<br/>
+                                        for (int j = i; j < numTeachers - 1; j++) {<br/>
+                                            teachers[j] = teachers[j + 1];<br/>
+                                        }<br/>
+                                        teachers[numTeachers - 1] = null;<br/>
+                                        numTeachers--;<br/>
+                                        break;<br/>
+                                    }<br/>
+                                }<br/>
+                                if (!found) {<br/>
+                                    System.out.println("Teacher not found: " + teacherName);<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to create a class<br/>
+                            public void createClass(String className) {<br/>
+                                if (numClasses < classes.length) {<br/>
+                                    classes[numClasses] = className;<br/>
+                                    numClasses++;<br/>
+                                    System.out.println("Class created: " + className);<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot create more classes. Limit reached.");<br/>
+                                }<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro14 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating a School instance<br/>
+                                School school = new School(20, 5, 10); // Assuming limits for 20 students, 5 teachers, and 10 classes<br/>
+                        <br/>
+                                // Adding students<br/>
+                                Student student1 = new Student("Alice", 10);<br/>
+                                Student student2 = new Student("Bob", 9);<br/>
+                        <br/>
+                                school.addStudent(student1);<br/>
+                                school.addStudent(student2);<br/>
+                        <br/>
+                                // Removing a student<br/>
+                                school.removeStudent("Bob");<br/>
+                        <br/>
+                                // Adding teachers<br/>
+                                Teacher teacher1 = new Teacher("Mr. Smith", "Math");<br/>
+                                Teacher teacher2 = new Teacher("Ms. Johnson", "Science");<br/>
+                        <br/>
+                                school.addTeacher(teacher1);<br/>
+                                school.addTeacher(teacher2);<br/>
+                        <br/>
+                                // Removing a teacher<br/>
+                                school.removeTeacher("Ms. Johnson");<br/>
+                        <br/>
+                                // Creating classes<br/>
+                                school.createClass("Mathematics");<br/>
+                                school.createClass("Science");<br/>
+                            }<br/>
+                        }
+                        
+                       
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro14.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

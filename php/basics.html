@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>PHP-BASICS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Php Basics</h1>
+                        <h2>Tokens</h2>
+                        <p>
+                            PHP code consists of various tokens, including keywords, identifiers, constants, strings,
+                            and operators. These tokens are the building blocks of PHP scripts.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Variables</h2>
+                        <p>
+                            Variables in PHP are used to store data. They start with a dollar sign ($) followed by an
+                            identifier. PHP variables are case-sensitive.
+                        </p>
+                        <p>Example :- </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $variable_name = "Php Basics";
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Scope Of variable</h2>
+                        <p>
+                            PHP variables have different scopes:
+                        </p>
+                        <p>
+                            <span> <strong>1. Local Scope : </strong></span>Variables declared within a function.
+                        </p>
+                        <p>
+                            <span><strong>2. Global Scope : </strong></span>Variables declared outside functions.
+                        </p>
+                        <p>
+                            <span><strong>3. Static Scope : </strong></span> Variables within a function that retain
+                            their values between function calls.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Constants</h2>
+                        <p>
+                            Constants are used to store values that cannot be changed. They are defined using the
+                            define() function.
+                        </p>
+                        <p>Example :- </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            define("PI", 3.14159);
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Data Types</h2>
+                        <p>
+                            In PHP, data types specify the type of data that can be stored in a variable. PHP supports
+                            several data types, each designed for handling specific types of information. Here are some
+                            of the most common data types in PHP: </p>
+                        <p>
+                            <strong>Integer :-</strong>Integer data type represents whole numbers. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $rollno=7004;
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Float :-</strong>Float data type, also known as floating-point or double, represents
+                            numbers with decimal points. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $balance=78.54 Rs;
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>String :-</strong>String data type represents sequences of characters, such as text.
+                            Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $friend="abcd"
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Array: </strong>Array data type is used to store collections of values, such as
+                            lists or associative arrays. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $fruits = array("apple", "banana", "cherry");
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Object:</strong>Object data type is used to create custom data structures and
+                            classes. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            class Person {<br />
+                            public $name;<br />
+                            public $age;<br />
+                            }
+                        </P>
+                        <P>
+                            $person = new Person();<br />
+                            $person->name = "Alice";<br />
+                            $person->age = 25;
+                        </P>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Boolean: </strong>Boolean data type represents true or false values. Example:
+
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $flag = true;
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Comments</h2>
+                        <p>
+                            Comments in PHP can be used to explain code and are not executed. Single-line comments start
+                            with //, and multi-line comments are enclosed in /* */.
+                        </p>
+                        <p>Example :- </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // This is a single-line comment
+                            <BR />
+                            /*<BR />
+                            This is a multi-line comment<br />
+                            It can span multiple lines<br />
+                            */
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Echo and Print Statements</h2>
+                        <p>
+                            PHP uses <strong>echo</strong> and <strong>print</strong> statements to output data to the
+                            browser.
+                        </p>
+                        <p>Example :- </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $name="Codeweb"<br />
+                            echo "Learning With ".$name;
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output:- </p>
+                    </div>
+                    <div class="output">
+                        <p>Learning With Codeweb</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            This webpage has provided an overview of essential PHP basics, including tokens, variables,
+                            scope of variables, constants, operators, data types, number handling, comments, and the use
+                            of echo and print statements. Understanding these fundamental concepts is crucial for
+                            building dynamic and interactive web applications with PHP. As you continue your PHP
+                            journey, you'll explore more advanced topics and gain proficiency in web development.
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

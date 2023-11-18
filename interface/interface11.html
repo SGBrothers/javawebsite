@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                 <p>
+                    /*<br/>
+    11. Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own implementations of the sort() method. <br/>
+*/<br/>
+interface Sortable<br/>
+{<br/>
+    void sort(int[] array);<br/>
+}<br/>
+<br/>
+class QuickSort implements Sortable<br/>
+{<br/>
+    // @Override<br/>
+    public void sort(int[] array)<br/>
+    {<br/>
+        quickSort(array, 0, array.length - 1);<br/>
+    }<br/>
+    private void quickSort(int[] array, int low, int high)<br/>
+    {<br/>
+        if (low < high)<br/>
+        {<br/>
+            int pivotIndex = partition(array, low, high);<br/>
+            quickSort(array, low, pivotIndex - 1);<br/>
+            quickSort(array, pivotIndex + 1, high);<br/>
+        }<br/>
+    }<br/>
+    private int partition(int[] array, int low, int high)<br/>
+    {<br/>
+        int pivot = array[high];<br/>
+        int i = low - 1;<br/>
+        for (int j = low; j < high; j++)<br/>
+            if (array[j] >= pivot) {<br/>
+                i++;<br/>
+                int temp = array[i];<br/>
+                array[i] = array[j];<br/>
+                array[j] = temp;<br/>
+            }<br/>
+<br/>
+        int temp = array[i + 1];<br/>
+        array[i + 1] = array[high];<br/>
+        array[high] = temp;<br/>
+        return i + 1;<br/>
+    }<br/>
+}<br/>
+
+class MergeSort implements Sortable<br/>
+{<br/>
+    // @Override<br/>
+    public void sort(int[] array)<br/>
+    {<br/>
+        mergeSort(array, 0, array.length - 1);<br/>
+    }<br/>
+    private void mergeSort(int[] array, int left, int right)<br/>
+    {<br/>
+        if (left < right)<br/>
+        {<br/>
+            int mid = left + (right - left) / 2;<br/>
+            mergeSort(array, left, mid);<br/>
+            mergeSort(array, mid + 1, right);<br/>
+            merge(array, left, mid, right);<br/>
+        }<br/>
+    }<br/>
+    private void merge(int[] array, int left, int mid, int right)<br/>
+    {<br/>
+        int n1 = mid - left + 1;<br/>
+        int n2 = right - mid;<br/>
+<br/>
+        int[] leftArray = new int[n1];<br/>
+        int[] rightArray = new int[n2];<br/>
+<br/>
+        for (int i = 0; i < n1; i++)<br/>
+        {<br/>
+            leftArray[i] = array[left + i];<br/>
+        }<br/>
+        for (int j = 0; j < n2; j++)<br/>
+        {<br/>
+            rightArray[j] = array[mid + 1 + j];<br/>
+        }<br/>
+        int i = 0, j = 0, k = left;<br/>
+        <br/>
+        while (i < n1 && j < n2)<br/>
+        {<br/>
+            if (leftArray[i] >= rightArray[j]) {<br/>
+                array[k] = leftArray[i];<br/>
+                i++;<br/>
+            } else {<br/>
+                array[k] = rightArray[j];<br/>
+                j++;<br/>
+            }<br/>
+            k++;<br/>
+        }<br/>
+        while (i < n1)<br/>
+        {<br/>
+            array[k] = leftArray[i];<br/>
+            i++;<br/>
+            k++;<br/>
+        }<br/>
+        while (j < n2)<br/>
+        {<br/>
+            array[k] = rightArray[j];<br/>
+            j++;<br/>
+            k++;<br/>
+        }<br/>
+    }<br/>
+}
+<br/>
+class Test<br/>
+{<br/>
+    public static void main(String[] args)<br/>
+    {<br/>
+        int[] arr = {5, 1, 9, 3, 7, 6};<br/>
+        <br/>
+        Sortable quickSort = new QuickSort();<br/>
+        quickSort.sort(arr);<br/>
+        System.out.print("QuickSort: ");<br/>
+        printArray(arr);<br/>
+<br/>
+        int[] arr2 = {5, 1, 9, 3, 7, 6};<br/>
+<br/>
+        Sortable mergeSort = new MergeSort();<br/>
+        mergeSort.sort(arr2);<br/>
+        System.out.print("MergeSort: ");<br/>
+        printArray(arr2);<br/>
+    }<br/>
+    private static void printArray(int[] array)<br/>
+    {<br/>
+        for (int num : array) {<br/>
+            System.out.print(num + " ");<br/>
+        System.out.println();<br/>
+    }<br/>
+}
+                 </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./interfaceimg/pro11.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

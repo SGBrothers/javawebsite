@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        import java.util.Random;<br/>
+<br/>
+                        class Song {<br/>
+                            private String title;<br/>
+                            private String artist;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Song(String title, String artist) {<br/>
+                                this.title = title;<br/>
+                                this.artist = artist;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getTitle() {<br/>
+                                return title;<br/>
+                            }<br/>
+                        <br/>
+                            public String getArtist() {<br/>
+                                return artist;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class MusicLibrary {<br/>
+                            private Song[] songs;<br/>
+                            private int numSongs;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public MusicLibrary(int maxSongs) {<br/>
+                                songs = new Song[maxSongs];<br/>
+                                numSongs = 0;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a song to the library<br/>
+                            public void addSong(Song song) {<br/>
+                                if (numSongs < songs.length) {<br/>
+                                    songs[numSongs] = song;<br/>
+                                    numSongs++;<br/>
+                                    System.out.println("Song added to the library: " + song.getTitle() + " by " + song.getArtist());<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot add more songs. Library is full.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to remove a song from the library<br/>
+                            public void removeSong(String songTitle) {<br/>
+                                boolean found = false;<br/>
+                                for (int i = 0; i < numSongs; i++) {<br/>
+                                    if (songs[i].getTitle().equalsIgnoreCase(songTitle)) {<br/>
+                                        found = true;<br/>
+                                        System.out.println("Song removed from the library: " + songs[i].getTitle() + " by " + songs[i].getArtist());<br/>
+                                        for (int j = i; j < numSongs - 1; j++) {<br/>
+                                            songs[j] = songs[j + 1];<br/>
+                                        }<br/>
+                                        songs[numSongs - 1] = null;<br/>
+                                        numSongs--;<br/>
+                                        break;<br/>
+                                    }<br/>
+                                }<br/>
+                                if (!found) {<br/>
+                                    System.out.println("Song not found in the library: " + songTitle);<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to play a random song<br/>
+                            public void playRandomSong() {<br/>
+                                if (numSongs == 0) {<br/>
+                                    System.out.println("No songs in the library to play.");<br/>
+                                    return;<br/>
+                                }<br/>
+                        <br/>
+                                Random random = new Random();<br/>
+                                int randomIndex = random.nextInt(numSongs);<br/>
+                                Song randomSong = songs[randomIndex];<br/>
+                                System.out.println("Playing a random song: " + randomSong.getTitle() + " by " + randomSong.getArtist());<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                         class pro15 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating a MusicLibrary instance<br/>
+                                MusicLibrary musicLibrary = new MusicLibrary(10); // Assuming maximum 10 songs in the library<br/>
+                        <br/>
+                                // Adding songs to the library<br/>
+                                Song song1 = new Song("Song A", "Artist X");<br/>
+                                Song song2 = new Song("Song B", "Artist Y");<br/>
+                                Song song3 = new Song("Song C", "Artist Z");<br/>
+                        <br/>
+                                musicLibrary.addSong(song1);<br/>
+                                musicLibrary.addSong(song2);<br/>
+                                musicLibrary.addSong(song3);<br/>
+                        <br/>
+                                // Removing a song from the library<br/>
+                                musicLibrary.removeSong("Song B");<br/>
+                        <br/>
+                                // Playing a random song<br/>
+                                musicLibrary.playRandomSong();<br/>
+                            }<br/>
+                        }
+                        
+
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro15.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

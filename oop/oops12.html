@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        import java.util.Date;<br/>
+import java.text.SimpleDateFormat;<br/>
+class Airplane {<br/>
+    private String flightNumber;<br/>
+    private String destination;<br/>
+    private String departureTime;<br/>
+<br/>
+    public Airplane(String flightNumber, String destination, String departureTime) {<br/>
+        this.flightNumber = flightNumber;<br/>
+        this.destination = destination;<br/>
+        this.departureTime = departureTime;<br/>
+    }<br/>
+<br/>
+    public String getFlightStatus() {<br/>
+        return "Flight " + flightNumber + " to " + destination + " is scheduled to depart at " + departureTime + ".";<br/>
+    }<br/>
+<br/>
+    public void delay(int delayInMinutes) {<br/>
+        departureTime = new SimpleDateFormat("HH:mm").format(new Date(new Date().getTime() + delayInMinutes * 60000));<br/>
+    }<br/>
+<br/>
+    public static void main(String[] args) {<br/>
+        Airplane flight1 = new Airplane("AA1234", "New York", "10:30");<br/>
+        System.out.println(flight1.getFlightStatus());<br/>
+<br/>
+        flight1.delay(30);<br/>
+        System.out.println("Flight status after delay: " + flight1.getFlightStatus());<br/>
+    }<br/>
+}
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro12.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

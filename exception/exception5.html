@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                        <p>
+                            // Write a Java program that reads a file and throws an exception if the file is empty.<br/>
+import java.io.File;<br/>
+import java.io.FileReader;<br/>
+import java.io.IOException;<br/>
+<br/>
+class EmptyFileException extends Exception {<br/>
+    public EmptyFileException(String message) {<br/>
+        super(message);<br/>
+    }<br/>
+}<br/>
+<br/>
+class CheckEmptyFile {<br/>
+    public static void main(String[] args) {<br/>
+        try {<br/>
+            checkFileNotEmpty("data.txt");<br/>
+        } catch (EmptyFileException e) {<br/>
+            System.out.println("Empty file detected: " + e.getMessage());<br/>
+        } catch (IOException e) {<br/>
+            System.out.println("File not found or cannot be read: " + e.getMessage());<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static void checkFileNotEmpty(String fileName) throws IOException, EmptyFileException {<br/>
+        File file = new File(fileName);<br/>
+<br/>
+        if (!file.exists() || file.length() == 0) {<br/>
+            throw new EmptyFileException("File is empty or does not exist.");<br/>
+        }<br/>
+<br/>
+        FileReader reader = new FileReader(file);<br/>
+        reader.close();<br/>
+    }<br/>
+}
+                         </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./exceptionimg/pro5.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

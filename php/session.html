@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>SESSION</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Sessions in PHP</h1>
+                        <p>
+                            Sessions in PHP are a way to store and manage user data across multiple pages during a
+                            user's visit to a website. Sessions are crucial for maintaining user-specific information,
+                            such as login status, shopping cart contents, and user preferences.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Importance of Sessions</h2>
+                        <p>
+                            Sessions are crucial for various web applications. They enable:
+                        </p>
+                        <p>
+                            <strong>User Authentication: </strong> Keeping users logged in during their visit.<br />
+                            <strong>Shopping Carts: </strong> Storing items in a cart while shopping online.<br />
+                            <strong>Personalization: </strong> Remembering user preferences and settings.<br />
+                            <strong>Security:</strong> Storing sensitive data securely on the server.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Creating a Session</h2>
+                        <p>In PHP, you can create a session using the session_start() function. Once started, you can
+                            store and retrieve data in the session array $_SESSION.</p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Start a session<br />
+                            session_start();<br /><br />
+
+                            // Store data in the session<br />
+                            $_SESSION["username"] = "john_doe";
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p> Output:- </p>
+                        <p>If Cookie is not set then, </p>
+                    </div>
+                    <div class="output">
+                        <p>Welcome, guest !</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            If Cookie is set then,
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Welcome back, Sourav Kumar !
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Starting Sessions</h2>
+                        <p>
+                            To start a session in PHP, you use the <strong>session_start()</strong> function. This
+                            function must be
+                            called before any output is sent to the browser.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            &lt;php<br />
+                            session_start();<br />
+                            ?><br />
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Destroying a Session</h2>
+                        <p>
+                            Sessions can be destroyed using <strong>session_destroy()</strong> or
+                            <strong>session_unset()</strong> functions to log out a user or reset session data.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Destroy the session<br />
+                            session_destroy();<br /><br />
+
+                            // Unset specific session variables<br />
+                            unset($_SESSION["username"]);
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Sessions are a critical aspect of web development in PHP. They allow developers to maintain
+                            user-specific data and implement features like user authentication and shopping carts.
+                            Understanding how to start, use, and secure sessions is fundamental for building interactive
+                            and secure web applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

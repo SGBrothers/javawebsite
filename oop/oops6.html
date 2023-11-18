@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                  <p>
+                    class Employee {<br/>
+                        private String name;<br/>
+                        private String jobTitle;<br/>
+                        private double salary;<br/>
+                    <br/>
+                        // Constructor<br/>
+                        public Employee(String name, String jobTitle, double salary) {<br/>
+                            this.name = name;<br/>
+                            this.jobTitle = jobTitle;<br/>
+                            this.salary = salary;<br/>
+                        }<br/>
+                    <br/>
+                        // Method to calculate salary increase<br/>
+                        public void increaseSalary(double percentage) {<br/>
+                            double increaseAmount = salary * (percentage / 100);<br/>
+                            salary += increaseAmount;<br/>
+                            System.out.println(name + "'s salary increased by " + percentage + "%. New salary: " + salary);<br/>
+                        }<br/>
+                    <br/>
+                        // Getter methods<br/>
+                        public String getName() {<br/>
+                            return name;<br/>
+                        }<br/>
+                    <br/>
+                        public String getJobTitle() {<br/>
+                            return jobTitle;<br/>
+                        }<br/>
+                    <br/>
+                        public double getSalary() {<br/>
+                            return salary;<br/>
+                        }<br/>
+                    <br/>
+                        // Setter method for job title (optional)<br/>
+                        public void setJobTitle(String jobTitle) {<br/>
+                            this.jobTitle = jobTitle;<br/>
+                        }<br/>
+                    }<br/>
+                    <br/>
+                    public class pro6 {<br/>
+                        public static void main(String[] args) {<br/>
+                            // Creating an Employee instance<br/>
+                            Employee employee = new Employee("Alice", "Software Engineer", 50000.0);<br/>
+                    <br/>
+                            // Displaying employee information<br/>
+                            System.out.println("Employee Name: " + employee.getName());<br/>
+                            System.out.println("Job Title: " + employee.getJobTitle());<br/>
+                            System.out.println("Salary: " + employee.getSalary());<br/>
+                    <br/>
+                            // Increasing employee salary by 10%<br/>
+                            employee.increaseSalary(10);<br/>
+                        }<br/>
+                    }
+                    
+                  </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro6.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

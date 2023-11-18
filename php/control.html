@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>CONTROL STRUCTURES</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Control Structures in PHP</h1>
+                        <h2>Conditional Statements</h2>
+                        <p>
+                            Conditional statements in PHP allow you to make decisions in your code based on certain
+                            conditions. PHP supports several conditional statements: </p>
+                        <p>
+                            <strong>If else Statement :</strong>Executes code if a specified condition is true otherwise
+                            else will be executed. Only if can be used. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $age = 15;<br />
+                            if ($age
+                            < 18) {<br />
+                            echo "You are under 18.";<br />
+                            } else if ($age
+                            < 30) {<br />
+                            echo "You are under 30.";<br />
+                            } else {<br />
+                            echo "You are 18 or older.";<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>You are under 18</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Switch Statement</strong>Evaluates a value against multiple possible cases. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $day = "Monday";<br />
+                            switch ($day) {<br />
+                            case "Monday":<br />
+                            echo "It's Monday!";<br />
+                            break;<br />
+                            case "Tuesday":<br />
+                            echo "It's Tuesday!";<br />
+                            break;<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>It's Monday!</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Looping Statements</h2>
+                        <p>
+                            Looping statements in PHP allow you to execute a block of code repeatedly. PHP supports
+                            several looping statements:
+                        </p>
+                        <p>
+                            <strong>For Loop :</strong>Executes code a specified number of times. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            for ($i = 0; $i &lt; 5; $i++) {<br />
+                            echo "Iteration: $i &lt;br&gt;";<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output:- </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Iteration : 0<br />
+                            Iteration : 1<br />
+                            Iteration : 2<br />
+                            Iteration : 3<br />
+                            Iteration : 4
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>While loop :</strong>Executes code while a specified condition is true. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $counter = 0;<br />
+                            while ($counter
+                            < 3) {<br />
+                            echo "Iteration: $counter &lt;br&gt;";<br />
+                            $counter++;<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Iteration: 0<br />
+                            Iteration: 1<br />
+                            Iteration: 2<br />
+                            Iteration: 3<br />
+                            Iteration: 4<br />
+                            Iteration: 5<br />
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Do-While Loop :</strong>Executes code at least once and continues as long as a
+                            specified condition is true. Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $counter = 0;<br>
+                            do {<br />
+                            echo "Iteration: $counter &lt;br&gt;";<br>
+                            $counter++;<br>
+                            } while ($counter < 6);<br>
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Iteration: 0<br />
+                            Iteration: 1<br />
+                            Iteration: 2<br />
+                            Iteration: 3<br />
+                            Iteration: 4<br />
+                            Iteration: 5<br />
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Foreach Loop :</strong>Iterates over elements in an array or other iterable objects.
+                            Example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $colors = array("red", "green", "blue");<br />
+                            foreach ($colors as $color) {<br />
+                            echo "Color: $color &lt;br&gt;";<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Color: red<br />
+                            Color: green<br />
+                            Color: blue
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Control structures are essential elements of PHP programming that allow you to make
+                            decisions, repeat tasks, and include external code. By mastering conditional statements and
+                            looping statements, you gain the ability to create dynamic and interactive web applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

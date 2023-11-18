@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                            Animal.java<br/>
+                        package pack1;<br/>
+<br/>
+                        public abstract class Animal<br/>
+                         <br/>
+                        {<br/>
+                        
+                            protected String name;<br/>
+                            protected String sound;<br/>
+                        <br/>
+                            public Animal(String name, String sound)<br/>
+                         <br/>
+                        {<br/>
+                                this.name = name;<br/>
+                                this.sound = sound;<br/>
+                        }<br/>
+                        <br/>
+                            public abstract void makeSound();<br/>
+                        }<br/>
+                            Cat.java<br/>
+                            package pack1;<br/>
+<br/>
+                            public class Cat extends Animal {<br/>
+                            <br/>
+                                public Cat(String name) {<br/>
+                                    super(name, "Meow!");<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public void makeSound() {<br/>
+                                    System.out.println(name + " says: " + sound);<br/>
+                                }<br/>
+                            }<br/>
+                            Dog.java<br/>
+                            package pack1;<br/>
+<br/>
+                            public class Dog extends Animal {<br/>
+                            <br/>
+                                public Dog(String name)<br/>
+                                 {<br/>
+                                    super(name, "Woof!");<br/>
+                                    }<br/>
+                            <br/>
+                                @Override<br/>
+                                public void makeSound() {<br/>
+                                    System.out.println(name + " says: " + sound);<br/>
+                                }<br/>
+                            }<br/>
+<br/>
+                            Bird.java<br/>
+                            package pack1;<br/>
+<br/>
+public class Bird extends Animal {<br/>
+<br/>
+    public Bird(String name) {<br/>
+        super(name, "Chirp!");<br/>
+    }<br/>
+<br/>
+    @Override<br/>
+    public void makeSound() {<br/>
+        System.out.println(name + " says: " + sound);<br/>
+    }<br/>
+}<br/>
+                    Main.java<br/>
+package pack1;<br/>
+<br/>
+public class Main {<br/>
+<br/>
+    public static void main(String[] args) {<br/>
+        Dog dog = new Dog("Rex");<br/>
+        dog.makeSound();<br/>
+<br/>
+        Cat cat = new Cat("Kitty");<br/>
+        cat.makeSound();<br/>
+<br/>
+        Bird bird = new Bird("Tweety");<br/>
+        bird.makeSound();<br/>
+    }<br/>
+}<br/>
+
+                        </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./packageimg/pro6.jpg" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

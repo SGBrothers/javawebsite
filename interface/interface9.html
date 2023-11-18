@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                  <p>
+                    //Write a Java program to create an interface Searchable with a method search(String keywordss) that searches for a given keywordss in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method.<br/> 
+import java.io.BufferedReader;<br/>
+import java.io.FileReader;<br/>
+import java.io.IOException;<br/>
+import java.io.InputStreamReader;<br/>
+import java.net.URL;<br/>
+import java.util.Scanner;<br/>
+<br/>
+interface Searchable<br/>
+{<br/>
+    public void search(String keywordss);<br/>
+}<br/>
+class Document implements Searchable<br/>
+{<br/>
+    public void search(String keywordss)<br/>
+    {<br/>
+        String keyword = "your_keyword_here"; // Replace with the keywordss you want to search for<br/>
+        String filePath = "data.txt"; // Replace with the path to your text document
+<br/>
+        try {<br/>
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));<br/>
+            String line;<br/>
+            int lineNumber = 0;<br/>
+<br/>
+            while ((line = reader.readLine()) != null) {<br/>
+                lineNumber++;<br/>
+                if (line.contains(keywordss)) {<br/>
+                    System.out.println("Found '" + keywordss + "' on line " + lineNumber + ": " + line);<br/>
+                }<br/>
+            }<br/>
+
+            reader.close();<br/>
+        } catch (IOException e) {<br/>
+            System.err.println("An error occurred while reading the file: " + e.getMessage());<br/>
+        }<br/>
+    }<br/>
+}<br/>
+class WebPage implements Searchable<br/>
+{<br/>
+    public void search(String keywordss)<br/>
+    {<br/>
+         Scanner scanner = new Scanner(System.in);<br/>
+        System.out.print("Enter the URL of the web page: ");<br/>
+        String urlString = scanner.nextLine();<br/>
+        System.out.print("Enter the keyword to search for: ");<br/>
+        String keyword = scanner.nextLine();<br/>
+<br/>
+        try {<br/>
+            // Create a URL object to represent the web page<br/>
+            URL url = new URL(urlString);<br/>
+<br/>
+            // Open a connection to the URL<br/>
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));<br/>
+            String line;<br/>
+            int lineNumber = 0;<br/>
+            int keywordCount = 0;<br/>
+<br/>
+            while ((line = reader.readLine()) != null) {<br/>
+                lineNumber++;<br/>
+                if (line.contains(keyword)) {<br/>
+                    keywordCount++;<br/>
+                    System.out.println("Found '" + keyword + "' on line " + lineNumber + ": " + line);<br/>
+                }<br/>
+            }<br/>
+<br/>
+            reader.close();<br/>
+<br/>
+            if (keywordCount == 0) {<br/>
+                System.out.println("Keyword '" + keyword + "' not found on the web page.");<br/>
+            } else {<br/>
+                System.out.println("Found '" + keyword + "' " + keywordCount + " times on the web page.");<br/>
+            }<br/>
+        } catch (IOException e) {<br/>
+            System.err.println("An error occurred while accessing the web page: " + e.getMessage());<br/>
+        }<br/>
+    }<br/>
+}<br/>
+class check {<br/>
+    public static void main(String[] args) {<br/>
+        Document d = new Document();<br/>
+        WebPage w = new WebPage();<br/>
+        d.search("one");<br/>
+        w.search("one");<br/>
+    }<br/>
+}
+                  </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./interfaceimg/pro9.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

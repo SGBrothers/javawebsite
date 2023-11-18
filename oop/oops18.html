@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        import java.util.ArrayList;<br/>
+<br/>
+                        public class Restaurant {<br/>
+                          private ArrayList< String > menuItems;<br/>
+                          private ArrayList< Double > prices;<br/>
+                          private ArrayList< Integer > ratings;<br/>
+                          private ArrayList< Integer > itemCounts;<br/>
+                        <br/>
+                          public Restaurant() {<br/>
+                            this.menuItems = new ArrayList< String >();<br/>
+                            this.prices = new ArrayList< Double >();<br/>
+                            this.ratings = new ArrayList< Integer >();<br/>
+                            this.itemCounts = new ArrayList< Integer >();<br/>
+                          }<br/>
+                        <br/>
+                          public void addItem(String item, double price) {<br/>
+                            this.menuItems.add(item);<br/>
+                            this.prices.add(price);<br/>
+                            this.ratings.add(0);<br/>
+                            this.itemCounts.add(0);<br/>
+                          }<br/>
+                        <br/>
+                          public void removeItem(String item) {<br/>
+                            int index = this.menuItems.indexOf(item);<br/>
+                            if (index >= 0) {<br/>
+                              this.menuItems.remove(index);<br/>
+                              this.prices.remove(index);<br/>
+                              this.ratings.remove(index);<br/>
+                              this.itemCounts.remove(index);<br/>
+                            }<br/>
+                          }<br/>
+                        <br/>
+                          public void addRating(String item, int rating) {<br/>
+                            int index = this.menuItems.indexOf(item);<br/>
+                            if (index >= 0) {<br/>
+                              int currentRating = this.ratings.get(index);<br/>
+                              int totalCount = this.itemCounts.get(index);<br/>
+                              this.ratings.set(index, currentRating + rating);<br/>
+                              this.itemCounts.set(index, totalCount + 1);<br/>
+                            }<br/>
+                          }<br/>
+                        <br/>
+                          public double getAverageRating(String item) {<br/>
+                            int index = this.menuItems.indexOf(item);<br/>
+                            if (index >= 0) {<br/>
+                              int totalRating = this.ratings.get(index);<br/>
+                              int itemCount = this.itemCounts.get(index);<br/>
+                              return itemCount > 0 ? (double) totalRating / itemCount : 0.0;<br/>
+                            } else {<br/>
+                              return 0.0;<br/>
+                            }<br/>
+                          }<br/>
+                        <br/>
+                          public void displayMenu() {<br/>
+                            for (int i = 0; i < menuItems.size(); i++) {<br/>
+                              System.out.println(menuItems.get(i) + ": $" + prices.get(i));<br/>
+                            }<br/>
+                          }<br/>
+                        <br/>
+                          public double calculateAverageRating() {<br/>
+                            double totalRating = 0;<br/>
+                            int numRatings = 0;<br/>
+                            for (int i = 0; i < ratings.size(); i++) {<br/>
+                              totalRating += ratings.get(i);<br/>
+                              numRatings++;<br/>
+                            }<br/>
+                            return numRatings > 0 ? totalRating / numRatings : 0.0;<br/>
+                          }<br/>
+                          //main.java<br/>
+                        <br/>
+                          public static  void main(String[] args) {<br/>
+                            Restaurant restaurant = new Restaurant();<br/>
+                            restaurant.addItem("Burger", 5.00);<br/>
+                            restaurant.addItem("Pizza", 10.00);<br/>
+                            restaurant.addItem("Salad", 6.00);<br/>
+                        <br/>
+                            System.out.println("Menu:Item & Price");<br/>
+                            restaurant.displayMenu();<br/>
+                        <br/>
+                            restaurant.addRating("Burger", 3);<br/>
+                            restaurant.addRating("Burger", 5);<br/>
+                            restaurant.addRating("Pizza", 3);<br/>
+                            restaurant.addRating("Pizza", 4);<br/>
+                            restaurant.addRating("Salad", 2);<br/>
+                             <br/>
+                            double averageRating = restaurant.getAverageRating("Burger");<br/>
+                            System.out.println("\nAverage rating for Burger: " + averageRating); <br/>	 
+                            averageRating = restaurant.getAverageRating("Pizza");<br/>
+                            System.out.println("Average rating for Pizza: " + averageRating);  <br/>	 
+                            averageRating = restaurant.getAverageRating("Salad");<br/>
+                            System.out.println("Average rating for Salad: " + averageRating); <br/>	 	 
+                            System.out.println("Average rating: " + restaurant.calculateAverageRating());<br/>
+                            System.out.println("\nRemove 'Pizza' from the above menu.");<br/>
+                            restaurant.removeItem("Pizza");<br/>
+                            System.out.println("\nUpdated menu:");<br/>
+                            restaurant.displayMenu();<br/>
+                          }<br/>
+                        }
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro18.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

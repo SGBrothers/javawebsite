@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        class Product {<br/>
+                            private String name;<br/>
+                            private int quantity;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Product(String name, int quantity) {<br/>
+                                this.name = name;<br/>
+                                this.quantity = quantity;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to increase product quantity<br/>
+                            public void increaseQuantity(int amount) {<br/>
+                                quantity += amount;<br/>
+                                System.out.println("Added " + amount + " " + name + "(s) to inventory. Total quantity: " + quantity);<br/>
+                            }<br/>
+                        <br/>
+                            // Method to decrease product quantity<br/>
+                            public void decreaseQuantity(int amount) {<br/>
+                                if (quantity >= amount) {<br/>
+                                    quantity -= amount;<br/>
+                                    System.out.println("Removed " + amount + " " + name + "(s) from inventory. Total quantity: " + quantity);<br/>
+                                } else {<br/>
+                                    System.out.println("Insufficient " + name + "(s) in inventory.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getName() {<br/>
+                                return name;<br/>
+                            }<br/>
+                        <br/>
+                            public int getQuantity() {<br/>
+                                return quantity;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Inventory {<br/>
+                            private Product[] products;<br/>
+                            private int numProducts;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Inventory(int maxProducts) {<br/>
+                                products = new Product[maxProducts];<br/>
+                                numProducts = 0;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a product to the inventory<br/>
+                            public void addProduct(Product product) {<br/>
+                                if (numProducts < products.length) {<br/>
+                                    products[numProducts] = product;<br/>
+                                    numProducts++;<br/>
+                                    System.out.println("Product added to inventory: " + product.getName());<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot add more products. Inventory is full.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to remove a product from the inventory<br/>
+                            public void removeProduct(String productName) {<br/>
+                                boolean found = false;<br/>
+                                for (int i = 0; i < numProducts; i++) {<br/>
+                                    if (products[i].getName().equalsIgnoreCase(productName)) {<br/>
+                                        found = true;<br/>
+                                        System.out.println("Product removed from inventory: " + products[i].getName());<br/>
+                                        for (int j = i; j < numProducts - 1; j++) {<br/>
+                                            products[j] = products[j + 1];<br/>
+                                        }<br/>
+                                        products[numProducts - 1] = null;<br/>
+                                        numProducts--;<br/>
+                                        break;<br/>
+                                    }<br/>
+                                }<br/>
+                                if (!found) {<br/>
+                                    System.out.println("Product not found in inventory: " + productName);<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to check for low inventory<br/>
+                            public void checkLowInventory(int threshold) {<br/>
+                                System.out.println("Products with low inventory:");<br/>
+                                for (int i = 0; i < numProducts; i++) {<br/>
+                                    if (products[i].getQuantity() < threshold) {<br/>
+                                        System.out.println("- " + products[i].getName() + ": " + products[i].getQuantity());<br/>
+                                    }<br/>
+                                }<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro13 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating an Inventory instance<br/>
+                                Inventory inventory = new Inventory(5); // Assuming maximum 5 products in the inventory<br/>
+                        <br/>
+                                // Adding products to the inventory<br/>
+                                Product product1 = new Product("Laptop", 10);<br/>
+                                Product product2 = new Product("Phone", 5);<br/>
+                                Product product3 = new Product("Tablet", 3<br/>);<br/>
+                        <br/>
+                                inventory.addProduct(product1);<br/>
+                                inventory.addProduct(product2);<br/>
+                                inventory.addProduct(product3);<br/>
+                        <br/>
+                                // Removing a product from the inventory<br/>
+                                inventory.removeProduct("Phone");<br/>
+                        <br/>
+                                // Checking for low inventory (threshold set to 5)<br/>
+                                inventory.checkLowInventory(5);<br/>
+                            }<br/>
+                        }<br/>
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro13.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        abstract class Shape {<br/>
+                            abstract double calculateArea();<br/>
+                            abstract double calculatePerimeter();<br/>
+                        }<br/>
+                        <br/>
+                        class Rectangle extends Shape {<br/>
+                            private double length;<br/>
+                            private double width;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Rectangle(double length, double width) {<br/>
+                                this.length = length;<br/>
+                                this.width = width;<br/>
+                            }<br/>
+                        <br/>
+                            // Implementing abstract methods<br/>
+                            @Override<br/>
+                            double calculateArea() {<br/>
+                                return length * width;<br/>
+                            }<br/>
+                        <br/>
+                            @Override<br/>
+                            double calculatePerimeter() {<br/>
+                                return 2 * (length + width);<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Circle extends Shape {<br/>
+                            private double radius;<br/>
+                            private final double PI = 3.14159;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Circle(double radius) {<br/>
+                                this.radius = radius;<br/>
+                            }<br/>
+                        <br/>
+                            // Implementing abstract methods<br/>
+                            @Override<br/>
+                            double calculateArea() {<br/>
+                                return PI * radius * radius;<br/>
+                            }<br/>
+                        <br/>
+                            @Override<br/>
+                            double calculatePerimeter() {<br/>
+                                return 2 * PI * radius;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Triangle extends Shape {<br/>
+                            private double sideA;<br/>
+                            private double sideB;<br/>
+                            private double sideC;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Triangle(double sideA, double sideB, double sideC) {<br/>
+                                this.sideA = sideA;<br/>
+                                this.sideB = sideB;<br/>
+                                this.sideC = sideC;<br/>
+                            }<br/>
+                        <br/>
+                            // Implementing abstract methods<br/>
+                            @Override<br/>
+                            double calculateArea() {<br/>
+                                // Heron's formula for area of a triangle<br/>
+                                double s = (sideA + sideB + sideC) / 2;<br/>
+                                return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));<br/>
+                            }<br/>
+                        <br/>
+                            @Override<br/>
+                            double calculatePerimeter() {<br/>
+                                return sideA + sideB + sideC;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro16 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating instances of shapes<br/>
+                                Rectangle rectangle = new Rectangle(5, 10);<br/>
+                                Circle circle = new Circle(7);<br/>
+                                Triangle triangle = new Triangle(3, 4, 5);<br/>
+                        <br/>
+                                // Calculating area and perimeter<br/>
+                                System.out.println("Rectangle - Area: " + rectangle.calculateArea() + ", Perimeter: " + rectangle.calculatePerimeter());<br/>
+                                System.out.println("Circle - Area: " + circle.calculateArea() + ", Circumference: " + circle.calculatePerimeter());<br/>
+                                System.out.println("Triangle - Area: " + triangle.calculateArea() + ", Perimeter: " + triangle.calculatePerimeter());<br/>
+                            }<br/>
+                        }
+                        
+
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro16.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

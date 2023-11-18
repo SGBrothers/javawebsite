@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        /*Write a Java program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee(). */<br/>
+<br/>
+                        // Employee class<br/>
+                        class Employee {<br/>
+                            private double salary;<br/>
+                        
+                            public Employee(double salary) {<br/>
+                                this.salary = salary;<br/>
+                            }<br/>
+                        <br/>
+                            public void work() {<br/>
+                                System.out.println("Employee is working...");<br/>
+                            }<br/>
+                        <br/>
+                            public double getSalary() {<br/>
+                                return salary;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        // HRManager subclass extending Employee<br/>
+                        class HRManager extends Employee {<br/>
+                            public HRManager(double salary) {<br/>
+                                super(salary);<br/>
+                            }<br/>
+                        <br/>
+                            @Override<br/>
+                            public void work() {<br/>
+                                System.out.println("HR Manager is working...");<br/>
+                            }<br/>
+                        <br/>
+                            public void addEmployee() {<br/>
+                                System.out.println("HR Manager is adding a new employee...");<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Inheritance4 {<br/>
+                            public static void main(String[] args) {<br/>
+                                Employee emp = new Employee(6000); // Creating an instance of Employee<br/>
+                                HRManager hrManager = new HRManager(7500); // Creating an instance of HRManager<br/>
+                        <br/>
+                                emp.work(); // Calling work() for Employee<br/>
+                                System.out.println("Employee Salary: " + emp.getSalary());<br/>
+                        <br/>
+                                System.out.println();<br/>
+                        
+                                hrManager.work(); // Calling work() for HRManager (overridden method)<br/>
+                                System.out.println("HR Manager Salary: " + hrManager.getSalary());<br/>
+                        <br/>
+                                hrManager.addEmployee(); // Calling addEmployee() for HRManager (specific method)<br/>
+                            }<br/>
+                        }
+                        
+
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./inheritanceimg/pro4.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

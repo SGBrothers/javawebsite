@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                   <p>
+
+
+                    //  Program to Insert a string into another string<br/>
+import java.util.Scanner;<br/>
+<br/>
+class String32 <br/>
+{<br/>
+    public static void main(String[] args) {<br/>
+        Scanner scanner = new Scanner(System.in);<br/>
+<br/>
+        // Get the main string from the user
+        System.out.print("\nEnter the main string: ");
+        String mainString = scanner.nextLine();<br/>
+<br/>
+        // Get the string to be inserted<br/>
+        System.out.print("Enter the string to insert: ");<br/>
+        String insertString = scanner.nextLine();<br/>
+<br/>
+        // Get the index at which to insert the string<br/>
+        System.out.print("Enter the index to insert the string: ");<br/>
+        int index = scanner.nextInt();<br/>
+<br/>
+        // Check if the index is within the valid range<br/>
+        if (index >= 0 && index <= mainString.length()) {<br/>
+            // Insert the string and display the result<br/>
+            String resultString = insertStringIntoMainString(mainString, insertString, index);<br/>
+            System.out.println("Result: " + resultString);<br/>
+        } else {<br/>
+            System.out.println("Invalid index. Please enter a valid index.");<br/>
+        }<br/>
+
+        scanner.close();<br/>
+    }<br/>
+<br/>
+    private static String insertStringIntoMainString(String mainString, String insertString, int index) {<br/>
+        // Concatenate the substrings before and after the insertion point<br/>
+        return mainString.substring(0, index) + insertString + mainString.substring(index);<br/>
+    }<br/>
+}
+                   </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./stringimg/pro32.png" alt="image" loading="lazy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>FORMS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Forms in PHP</h1>
+                        <h2>Form Controls</h2>
+                        <p>
+                            Forms in PHP allow users to submit data to a web server for processing. Common form controls
+                            include text fields, checkboxes, radio buttons, and buttons.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            &lt;form action="/action_page.php"&gt;<br>
+                            &lt;label for="fname"&gt;First name:&lt;/label&&gt;&lt;br&gt;<br>
+                            &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+                            &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>
+                            &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+                            &lt;input type="submit" value="Submit"&gt;<br>
+                            &lt;/form&gt;
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="image/form.png" alt="form img">
+                    </div>
+                    <div class="desc">
+                        <h2>Super Global Variables and Arrays</h2>
+                        <p>
+                            PHP uses super global arrays to access form data and other server variables. Common super
+                            global arrays include:
+                        </p>
+                        <p>
+                            <strong>$_GET : </strong> Contains data sent via HTTP GET method.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // URL: example.com/index.php?name=John<br />
+                            $name = $_GET["name"]; // "John"
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>$_POST : </strong> Contains data sent via HTTP POST method.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Form: &lt;input type="text" name="name"&gt;<br />
+                            $name = $_POST["name"]; // User input;
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong> $_REQUEST: </strong> data from both GET and POST methods.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $name = $_REQUEST["name"]; // User input from GET or POST
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>isset() Function</h2>
+                        <p>
+                            You can use array functions like isset() and empty() to check if elements exist in these
+                            arrays.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            if (isset($_POST["name"])) {<br />
+                            $name = $_POST["name"];<br />
+                            // Process the input<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Example :-
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            &lt;body><br />
+                            &lt;?php<br />
+                            if(<br />isset($_REQUEST["name"])<br />&&<br />isset($_REQUEST["rollno"])<br />&&<br />isset($_REQUEST["course"]))<br />
+                            {<br />
+                            foreach($_REQUEST as $key => $value)<br />
+                            {<br />
+                            if($key=="name")<br />
+                            {<br />
+                            echo "Your name will be :- ".$value."&lt;br>";<br />
+                            }<br />
+                            else if($key=="rollno")<br />
+                            {<br />
+                            echo "Your rollno will be :- ".$value."&lt;br>";<br />
+                            }<br />
+                            else<br />
+                            {<br />
+                            echo "Your course will be :- ".$value."&lt;br>";<br />
+
+                            }<br />
+                            }<br />
+                            }<br />
+                            else<br />
+                            {<br />
+                            ?><br />
+                            &lt;form action="formdata.php" method="POST"><br /><br/>
+                            &lt;div><br /><br/>
+                            &lt;span>Enter your name&lt;/span><br /><br/>
+                            &lt;input type="text" name="name"><br /><br/>
+                            &lt;/div><br /><br/>
+                            &lt;div><br /><br/>
+                            &lt;span>Enter your rollno&lt;/span><br /><br/>
+                            &lt;input type="number" name="rollno"><br /><br/>
+                            &lt;/div><br /><br/>
+                            &lt;div><br /><br/>
+                            &lt;span>Enter your Course&lt;/span><br /><br/>
+                            &lt;select name="course"><br /><br/>
+                            &lt;option value="BCA">BCA&lt;/option><br /><br/>
+                            &lt;option value="MCA">MCA&lt;/option><br /><br/>
+                            &lt;option value="MCOM">MCOM&lt;/option><br /><br/>
+                            &lt;/select><br /><br/>
+                            &lt;/div><br /><br/>
+                            &lt;div><br /><br/>
+                            &lt;input type="submit" value="submit"><br /><br/>
+                            &lt;/div><br /><br/>
+                            &lt;/form><br /><br/>
+                            &lt;?php } ?><br /><br/>
+                            &lt;/body>
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output :- </p>
+                    </div>
+                    <div class="image">
+                        <img src="image/form1.png" alt="form img">
+                    </div>
+                    <div class="image">
+                        <img src="image/form2.png" alt="form img">
+                    </div>
+
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Forms are essential for user interaction on websites. PHP provides super global variables
+                            and arrays to easily handle and process user input. Understanding form controls and how to
+                            work with form data is crucial for building interactive web applications.
+                        </p>
+                    </div>
+                </div>
+            </div><br/>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

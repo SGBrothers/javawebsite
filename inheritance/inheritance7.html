@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                   <p>
+                         
+ //Write a Java program to create a class known as Person with methods called getFirstName() and getLastName().<br/> Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title<br/>
+<br/>
+ class Person {<br/>
+     private String firstName;<br/>
+     private String lastName;<br/>
+ <br/>
+     public Person(String firstName, String lastName) {<br/>
+         this.firstName = firstName;<br/>
+         this.lastName = lastName;<br/>
+     }<br/>
+ <br/>
+     public String getFirstName() {<br/>
+         return firstName;<br/>
+     }<br/>
+ <br/>
+     public String getLastName() {<br/>
+         return lastName;<br/>
+     }<br/>
+ }<br/>
+ <br/>
+ class Employee extends Person {<br/>
+     private int employeeId;<br/>
+     private String jobTitle;<br/>
+ <br/>
+     public Employee(String firstName, String lastName, int employeeId, String jobTitle) {<br/>
+         super(firstName, lastName);<br/>
+         this.employeeId = employeeId;<br/>
+         this.jobTitle = jobTitle;<br/>
+     }<br/>
+ <br/>
+     public int getEmployeeId() {<br/>
+         return employeeId;<br/>
+     }<br/>
+ <br/>
+     
+     public String getLastName() {<br/>
+         return super.getLastName() + " (" + jobTitle + ")";<br/>
+     }<br/>
+ }<br/>
+ <br/>
+ class PersonAndEmployeeExample {<br/>
+     public static void main(String[] args) {<br/>
+         Person person = new Person("Bharat", "Bhatt");<br/>
+         Employee employee = new Employee("Ravi", "Bhatt", 12345, "Software Engineer");<br/>
+ <br/>
+         System.out.println("Person: " + person.getFirstName() + " " + person.getLastName());<br/>
+         System.out.println("Employee: " + employee.getFirstName() + " " + employee.getLastName() + ", Employee ID: " + employee.getEmployeeId());<br/>
+     }<br/>
+ }
+                   </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./inheritanceimg/pro7.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

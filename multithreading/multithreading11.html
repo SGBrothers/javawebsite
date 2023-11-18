@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                 <p>
+                    class program11 {<br/>
+                        private int counter = 0;<br/>
+                    <br/>
+                        public synchronized void increment() {<br/>
+                            counter++;<br/>
+                            System.out.println("Counter: " + counter + " | Thread ID: " + Thread.currentThread().getId());<br/>
+                        }<br/>
+                    <br/>
+                        public static void main(String[] args) {<br/>
+                            final program11 syncExample = new program11();<br/>
+                    <br/>
+                            // Creating multiple threads to increment the counter<br/>
+                            Thread thread1 = new Thread(new Runnable() {<br/>
+                                @Override<br/>
+                                public void run() {<br/>
+                                    for (int i = 0; i < 5; i++) {<br/>
+                                        syncExample.increment();<br/>
+                                    }<br/>
+                                }<br/>
+                            });<br/>
+                    <br/>
+                            Thread thread2 = new Thread(new Runnable() {<br/>
+                                @Override<br/>
+                                public void run() {<br/>
+                                    for (int i = 0; i < 5; i++) {<br/>
+                                        syncExample.increment();<br/>
+                                    }<br/>
+                                }<br/>
+                            });<br/>
+                    <br/>
+                            // Start the threads<br/>
+                            thread1.start();<br/>
+                            thread2.start();<br/>
+                        }<br/>
+                    }
+                    
+                 </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./multithreadinimg/pro11.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+
+                        import java.util.Scanner;<br />
+                        <br />
+                        class Calculator<br />
+                        {<br />
+                        void Calculator()<br />
+                        {<br />
+                        System.out.println(" ");<br />
+                        System.out.println("Program to create a Simple Calculator");<br />
+                        Scanner scan = new Scanner(System.in);<br />
+                        System.out.println("Simple Calculator");<br />
+                        System.out.println("----------------------------");<br />
+                        <br />
+                        while(true)<br />
+                        {<br />
+                        System.out.print("Enter First Number : ");<br />
+                        double first = scan.nextDouble();<br />
+                        System.out.print("Enter an Operator or enter q to exit : ");<br />
+                        char operator = scan.next().charAt(0);<br />
+                        <br />
+                        if(operator == 'q')<br />
+                        {<br />
+                        System.out.println("Calculator Exiting ");<br />
+                        break;<br />
+                        }<br />
+                        System.out.print("Enter Second Number : ");<br />
+                        double second = scan.nextDouble();<br />
+                        double result;<br />
+                        <br />
+                        switch(operator)<br />
+                        {<br />
+                        case '+':<br />
+                        result = first + second;<br />
+                        System.out.println("Addition is : " + result);<br />
+                        break;<br />
+                        case '-':<br />
+                        result = first - second;<br />
+                        System.out.println("Subtraction is : " + result);<br />
+                        break;<br />
+                        case '*':<br />
+                        result = first * second;<br />
+                        System.out.println("Multiplication is : " + result);<br />
+                        break;<br />
+                        case '/':<br />
+                        if(second != 0)<br />
+                        {<br />
+                        result = first / second;<br />
+                        System.out.println("Division is : " + result);<br />
+                        break;<br />
+                        }<br />
+                        else<br />
+                        {<br />
+                        System.out.println("Cannot divide by 0 !!");<br />
+                        continue;<br />
+                        }<br />
+                        default:<br />
+                        System.out.println("Please enter valid operator !!");<br />
+                        }<br />
+                        }<br />
+                        <br />
+                        }<br />
+                        public static void main(String args[])<br />
+                        {<br />
+                        Calculator obj = new Calculator();<br />
+                        obj.Calculator();<br />
+                        }<br />
+                        }
+                    </p>
+                </div>
+                <div class=" output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./basicimg/pro68.png" alt="image" loading="lazy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

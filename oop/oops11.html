@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        class Book {<br/>
+                            private String title;<br/>
+                            private String author;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Book(String title, String author) {<br/>
+                                this.title = title;<br/>
+                                this.author = author;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getTitle() {<br/>
+                                return title;<br/>
+                            }<br/>
+                        <br/>
+                            public String getAuthor() {<br/>
+                                return author;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        class Library {<br/>
+                            private Book[] books;<br/>
+                            private int numBooks;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Library(int maxBooks) {<br/>
+                                books = new Book[maxBooks];<br/>
+                                numBooks = 0;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a book to the library<br/>
+                            public void addBook(Book book) {<br/>
+                                if (numBooks < books.length) {<br/>
+                                    books[numBooks] = book;<br/>
+                                    numBooks++;<br/>
+                                    System.out.println("Book added: " + book.getTitle() + " by " + book.getAuthor());<br/>
+                                } else {<br/>
+                                    System.out.println("Cannot add more books. Library is full.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to remove a book from the library<br/>
+                            public void removeBook(String title) {<br/>
+                                boolean found = false;<br/>
+                                for (int i = 0; i < numBooks; i++) {<br/>
+                                    if (books[i].getTitle().equalsIgnoreCase(title)) {<br/>
+                                        found = true;<br/>
+                                        System.out.println("Book removed: " + books[i].getTitle() + " by " + books[i].getAuthor());<br/>
+                                        for (int j = i; j < numBooks - 1; j++) {<br/>
+                                            books[j] = books[j + 1];<br/>
+                                        }<br/>
+                                        books[numBooks - 1] = null;<br/>
+                                        numBooks--;<br/>
+                                        break;<br/>
+                                    }<br/>
+                                }<br/>
+                                if (!found) {<br/>
+                                    System.out.println("Book not found: " + title);<br/>
+                                }<br/>
+                            }<br/>
+                        }
+                        <br/>
+                        public class pro11 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating a Library instance<br/>
+                                Library library = new Library(5); // Assuming maximum 5 books in the library<br/>
+                        <br/>
+                                // Adding books to the library<br/>
+                                Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");<br/>
+                                Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");<br/>
+                                Book book3 = new Book("1984", "George Orwell");<br/>
+                        <br/>
+                                library.addBook(book1);<br/>
+                                library.addBook(book2);<br/>
+                                library.addBook(book3);<br/>
+                        <br/>
+                                // Removing a book from the library<br/>
+                                library.removeBook("To Kill a Mockingbird");<br/>
+                            }<br/>
+                        }
+                        
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro11.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

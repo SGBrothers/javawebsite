@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                <p>
+                    // Calculate sum of prime numbers up to a given limit using multiple threads<br/>
+                    class MyThread extends Thread {<br/>
+                        private int start, end;<br/>
+                        private int sum = 0;<br/>
+                    <br/>
+                        MyThread(int start, int end) {<br/>
+                            this.start = start;<br/>
+                            this.end = end;<br/>
+                        }<br/>
+                    <br/>
+                        public void run() {<br/>
+                            System.out.println("My thread is running");<br/>
+                            for (int i = start; i <= end; i++) {<br/>
+                                if (isPrime(i))<br/>
+                                    sum += i;<br/>
+                            }<br/>
+                        }<br/>
+                    <br/>
+                        boolean isPrime(int n) {<br/>
+                            if (n == 0 || n == 1)<br/>
+                                return false;<br/>
+                            for (int i = 2; i <= Math.sqrt(n); ++i) {<br/>
+                                if (n % i == 0)<br/>
+                                    return false;<br/>
+                            }<br/>
+                            return true;<br/>
+                        }<br/>
+                    <br/>
+                        public int getSum() {<br/>
+                            return sum;<br/>
+                        }<br/>
+                    }<br/>
+                    <br/>
+                    class program5 {<br/>
+                        MyThread[] myThreads;<br/>
+                        private int sum = 0;<br/>
+                        private int limit = 20;<br/>
+                        private static int threadCount = 4;<br/>
+                    <br/>
+                        // Constructor to initialize the array of threads<br/>
+                        public program5(int n) throws InterruptedException {<br/>
+                            this.myThreads = new MyThread[n];<br/>
+                            for (int i = 0; i < n; i++) {<br/>
+                                int start = ((limit * i) / n);<br/>
+                                int end = (i == n-1) ? limit : ((limit * (i+1))/n) - 1;<br/>
+                                myThreads[i] = new MyThread(start, end);<br/>
+                            }<br/>
+                        }<br/>
+                    <br/>
+                        // Function to start all threads<br/>
+                        public void startAll() throws InterruptedException {<br/>
+                            for (int i = 0; i < myThreads.length; i++) {<br/>
+                                myThreads[i].start();<br/>
+                                myThreads[i].join();<br/>
+                            }<br/>
+                        }<br/>
+                    <br/>
+                        public void getSum() {<br/>
+                            for (int i = 0; i < myThreads.length; i++) {<br/>
+                                this.sum += myThreads[i].getSum();<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public static void main(String[] args) {<br/>
+                            try {<br/>
+                                program5 mt = new program5(threadCount);<br/>
+                                mt.startAll();<br/>
+                                mt.getSum();<br/>
+                                System.out.println("Sum of prime numbers is " + mt.sum);<br/>
+                            } catch (InterruptedException e) {<br/>
+                                System.err.print("Error: " + e);<br/>
+                            }<br/>
+                        }<br/>
+                    }
+                </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./multithreadinimg/pro5.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                       <p>
+class pro136 <br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram to round up the result of integer division.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter the numerator: ");<br/>
+            int numerator = Integer.parseInt(input.readLine());<br/>
+<br/>
+            System.out.print("Enter the denominator: ");<br/>
+            int denominator = Integer.parseInt(input.readLine());<br/>
+<br/>
+            int result = roundUpIntegerDivision(numerator, denominator);<br/>
+<br/>
+            System.out.println("Rounded up result of integer division: " + result);<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter valid integers.");<br/>
+        } catch(java.lang.ArithmeticException e){<br/>
+            System.out.println("Division by zero is not allowed.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static int roundUpIntegerDivision(int numerator, int denominator) {<br/>
+        if (denominator == 0) <br/>
+            throw new java.lang.ArithmeticException();<br/>
+<br/>
+        int result = numerator / denominator;<br/>
+        int remainder = numerator % denominator;<br/>
+<br/>
+        if (remainder != 0) <br/>
+            result++;<br/>
+        <br/>
+        return result;<br/>
+    }<br/>
+}
+                       </p>
+                </div>
+                <div class=" output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./basicimg/pro136.png" alt="image" loading="lazy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

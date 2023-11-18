@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+/*Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle. */<br/>
+<br/>
+// Shape class<br/>
+class Shape {<br/>
+    public double getArea() {<br/>
+        return 0; // Default implementation for unknown shapes<br/>
+    }<br/>
+}<br/>
+<br/>
+// Rectangle subclass extending Shape<br/>
+class Rectangle extends Shape {<br/>
+    private double length;<br/>
+    private double width;<br/>
+<br/>
+    public Rectangle(double length, double width) {<br/>
+        this.length = length;<br/>
+        this.width = width;<br/>
+    }<br/>
+<br/>
+    @Override<br/>
+    public double getArea() {<br/>
+        return length * width; // Calculate area of rectangle<br/>
+    }<br/>
+}<br/>
+<br/>
+class Inheritance3 {<br/>
+    public static void main(String[] args) {<br/>
+        Shape shape = new Shape(); // Creating an instance of Shape (will use default getArea())<br/>
+<br/>
+        Rectangle rectangle = new Rectangle(20, 40); // Creating an instance of Rectangle<br/>
+        double rectangleArea = rectangle.getArea(); // Calculating area of rectangle<br/>
+<br/>
+        System.out.println("Area of a shape (default): " + shape.getArea());<br/>
+        System.out.println("Area of a rectangle: " + rectangleArea);<br/>
+    }<br/>
+}
+
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./inheritanceimg/pro3.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

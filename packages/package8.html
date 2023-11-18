@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                  <p>
+                    package pack1;<br/>
+<br/>
+                    public class ParentClass<br/>
+                     <br/>
+                    {<br/>
+                    <br/>
+                        protected String name;<br/>
+                        protected int age;<br/>
+                        public ParentClass(String name, int age)<br/>
+                     <br/>
+                        {<br/>
+                            this.name = name;<br/>
+                            this.age = age;<br/>
+                            }<br/>
+                    }<br/>
+                    <br/>
+                    class ChildClass extends ParentClass<br/>
+                     {<br/>
+                    <br/>
+                        public ChildClass(String name, int age)<br/>
+                         {<br/>
+                            super(name, age);<br/>
+                            }<br/>
+                    <br/>
+                        public void accessProtectedInfo() <br/>
+                        {<br/>
+                            System.out.println("Name: " + name);<br/>
+                            System.out.println("Age: " + age);<br/>
+                        }<br/>
+                    }<br/>
+                     class Main {<br/>
+                    <br/>
+                        public static void main(String[] args) {<br/>
+                            ChildClass childClass = new ChildClass("John Doe", 30);<br/>
+                            childClass.accessProtectedInfo();
+                        }<br/>
+                    }
+                  </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./packageimg/pro8.jpg" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

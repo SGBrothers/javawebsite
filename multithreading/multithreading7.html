@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+           <p>
+            class program7 {<br/>
+                private double balance;<br/>
+            <br/>
+                public program7(double initialBalance) {<br/>
+                    this.balance = initialBalance;<br/>
+                }<br/>
+            <br/>
+                public synchronized void deposit(double amount) {<br/>
+                    System.out.println("Depositing: " + amount);<br/>
+                    balance += amount;<br/>
+                    System.out.println("New Balance after deposit: " + balance);<br/>
+                }<br/>
+            <br/>
+                public synchronized void withdraw(double amount) {<br/>
+                    if (balance >= amount) {<br/>
+                        System.out.println("Withdrawing: " + amount);<br/>
+                        balance -= amount;<br/>
+                        System.out.println("New Balance after withdrawal: " + balance);<br/>
+                    } else {<br/>
+                        System.out.println("Insufficient balance for withdrawal.");<br/>
+                    }<br/>
+                }<br/>
+            <br/>
+                public static void main(String[] args) {<br/>
+                    program7 account = new program7(1000); // Starting balance<br/>
+            <br/>
+                    // Create multiple threads for deposits and withdrawals<br/>
+                    Thread depositThread = new Thread(new DepositTask(account));<br/>
+                    Thread withdrawThread = new Thread(new WithdrawTask(account));<br/>
+            <br/>
+                    depositThread.start();<br/>
+                    withdrawThread.start();<br/>
+                }<br/>
+            }<br/>
+            <br/>
+            class DepositTask implements Runnable {<br/>
+                private final program7 account;<br/>
+            <br/>
+                public DepositTask(program7 account) {<br/>
+                    this.account = account;<br/>
+                }<br/>
+            <br/>
+                public void run() {<br/>
+                    for (int i = 0; i < 5; i++) {<br/>
+                        account.deposit(100);<br/>
+                        try {<br/>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes<br/>
+                        } catch (InterruptedException e) {<br/>
+                            e.printStackTrace();<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+            }<br/>
+            <br/>
+            class WithdrawTask implements Runnable {<br/>
+                private final program7 account;<br/>
+            <br/>
+                public WithdrawTask(program7 account) {<br/>
+                    this.account = account;<br/>
+                }<br/>
+            <br/>
+                public void run() {<br/>
+                    for (int i = 0; i < 5; i++) {<br/>
+                        account.withdraw(150);<br/>
+                        try {<br/>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes<br/>
+                        } catch (InterruptedException e) {<br/>
+                            e.printStackTrace();<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+            }
+            
+           </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./multithreadinimg/pro7.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

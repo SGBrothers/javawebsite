@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>ARRAYS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Arrays</h1>
+                        <p>
+                            An array in PHP is an ordered map that can store multiple values. Each value is associated
+                            with a unique key or index.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $fruits = array("apple", "banana", "cherry");
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Creating and Types of Arrays</h2>
+                        <P>
+                            PHP supports different types of arrays:
+                        </P>
+                        <p>
+                            <strong>Numeric/Indexed Arrays : </strong> Arrays with numeric keys (0, 1, 2, ...) and
+                            values. These arrays
+                            accessed by the indexes of the element.<BR />Example :-
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $numericArray = array("apple", "banana", "cherry");<br />
+                            echo $numericArray[1];
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Output :-
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>banana</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong> Associative Arrays : </strong> Arrays with named keys and value
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $assocArray = array("name" => "John", "age" => 30);<br />
+                            echo $assocArray["name"];
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>John</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Multidimensional Arrays: Arrays that contain other arrays as their elements or we can say
+                            array of arrays.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $multidimensionalArray = array(<br />
+                            array("apple", "banana"),<br />
+                            array("cherry", "date")<br />
+                            );<br /><br />
+                            echo $multidimensionalArray[1][0]; // $result will be cherry
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>cherry</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Accessing Arrays</h2>
+                        <p>
+                            You can access array elements using loops or array functions: </p>
+                        <p>
+                            <strong>Looping through Arrays : </strong> Use <strong>foreach</strong> to iterate through
+                            array elements.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            foreach ($fruits as $fruit) {<br />
+                            echo "Fruit: $fruit";<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Array Functions: Functions like <strong>current()</strong>, <strong>next()</strong>,
+                            <strong>prev()</strong>, <strong>reset()</strong>, and <strong>end()</strong> can be used to
+                            manipulate the
+                            array pointer.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $fruits = array("apple", "banana", "cherry");<br /><br />
+                            echo current($fruits) . "&lt;br&gt;"; // "apple"<br /><br />
+                            next($fruits); // Move pointer to the next element<br /><br />
+                            echo current($fruits); // "banana"
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            apple <br />banana
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Deleting from Arrays</h2>
+                        <p>
+                            You can remove elements from arrays using functions like <strong>unset()</strong>.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $fruits = array("apple", "banana", "cherry");<br />
+                            unset($fruits[1]);<br />
+                            print_r($fruits)
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Array ( [0] => apple [2] => cherry)
+                        </p>
+                    </div>
+
+
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Arrays are a fundamental data structure in PHP, allowing you to store and manipulate
+                            multiple values efficiently. Understanding the types of arrays, accessing and inspecting
+                            array elements, and performing array operations are essential skills for PHP developers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

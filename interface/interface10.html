@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                 <p>
+                        
+//Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. <br/>Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.<br/>
+<br/>
+<br/>
+interface Encryptable {<br/>
+    String encrypt(String data);<br/>
+    String decrypt(String encryptedData);<br/>
+}<br/>
+<br/>
+ class AES implements Encryptable {<br/>
+    public String encrypt(String data) {<br/>
+        // Implement AES encryption here<br/>
+        return "Encrypted data with AES";<br/>
+    }<br/>
+<br/>
+    public String decrypt(String encryptedData) {<br/>
+        // Implement AES decryption here<br/>
+        return "Decrypted data with AES";<br/>
+    }<br/>
+}<br/>
+<br/>
+ class RSA implements Encryptable {<br/>
+    public String encrypt(String data) {<br/>
+        // Implement RSA encryption here<br/>
+        return "Encrypted data with RSA";<br/>
+    }<br/>
+<br/>
+    public String decrypt(String encryptedData) {<br/>
+        // Implement RSA decryption here<br/>
+        return "Decrypted data with RSA";<br/>
+    }<br/>
+}<br/>
+<br/>
+ class encryption {<br/>
+    public static void main(String[] args) {<br/>
+        Encryptable aes = new AES();<br/>
+        Encryptable rsa = new RSA();<br/>
+<br/>
+        String data = "Hello, World!";<br/>
+<br/>
+        System.out.println("AES Encryption and Decryption:");<br/>
+        String aesEncrypted = aes.encrypt(data);<br/>
+        System.out.println("Encrypted Data: " + aesEncrypted);<br/>
+        String aesDecrypted = aes.decrypt(aesEncrypted);<br/>
+        System.out.println("Decrypted Data: " + aesDecrypted);<br/>
+<br/>
+        System.out.println("\nRSA Encryption and Decryption:");<br/>
+        String rsaEncrypted = rsa.encrypt(data);<br/>
+        System.out.println("Encrypted Data: " + rsaEncrypted);<br/>
+        String rsaDecrypted = rsa.decrypt(rsaEncrypted);<br/>
+        System.out.println("Decrypted Data: " + rsaDecrypted);<br/>
+    }<br/>
+}
+
+                 </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./interfaceimg/pro10.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

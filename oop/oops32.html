@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        class Student {<br/>
+                            private int student_id;<br/>
+                            private String student_name;<br/>
+                            private int grades;<br/>
+                            private int numberOfGrades;<br/>
+                        <br/>
+                            // Getter and Setter for 'student_id'<br/>
+                            public int getStudentId() {<br/>
+                                return student_id;<br/>
+                            }<br/>
+                        <br/>
+                            public void setStudentId(int student_id) {<br/>
+                                this.student_id = student_id;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter and Setter for 'student_name'<br/>
+                            public String getStudentName() {<br/>
+                                return student_name;<br/>
+                            }<br/>
+                        <br/>
+                            public void setStudentName(String student_name) {<br/>
+                                this.student_name = student_name;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to add a grade with validation<br/>
+                            public void addGrade(int grade) {<br/>
+                                if (grade >= 0 && grade <= 100) {<br/>
+                                    grades += grade;<br/>
+                                    numberOfGrades++;<br/>
+                                } else {<br/>
+                                    System.out.println("Invalid grade. Grade should be between 0 and 100.");<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            // Method to calculate average grade<br/>
+                            public double calculateAverageGrade() {<br/>
+                                if (numberOfGrades > 0) {<br/>
+                                    return (double) grades / numberOfGrades;<br/>
+                                } else {<br/>
+                                    return 0.0;<br/>
+                                }<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro32 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating an instance of Student class<br/>
+                                Student student = new Student();<br/>
+                        <br/>
+                                // Setting values using setter methods<br/>
+                                student.setStudentId(101);<br/>
+                                student.setStudentName("Alice");<br/>
+                        <br/>
+                                // Adding grades<br/>
+                                student.addGrade(85);<br/>
+                                student.addGrade(92);<br/>
+                                student.addGrade(78);<br/>
+                        <br/>
+                                // Displaying student details and average grade<br/>
+                                System.out.println("Student ID: " + student.getStudentId());<br/>
+                                System.out.println("Student Name: " + student.getStudentName());<br/>
+                                System.out.println("Average Grade: " + student.calculateAverageGrade());<br/>
+                            }<br/>
+                        }
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro32.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

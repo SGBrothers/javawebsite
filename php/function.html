@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>FUNCTIONS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Functions</h1>
+                        <h2>What is a Function?</h2>
+                        <p>
+                            A function in PHP is a block of code that can be called and executed multiple times.
+                            Functions are used to encapsulate a set of actions, making code more organized, reusable,
+                            and easier to maintain.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Arguments (Formal and Actual)</h2>
+                        <p>
+                            Functions can accept parameters, known as formal parameters or arguments. When a function is
+                            called, you provide actual values for these arguments.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            function greet($name) {<BR />
+                            echo "Hello, $name!";<br />
+                            }<br />
+                            greet("John");
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>Hello , John!</p>
+                    </div>
+                    <div class="desc">
+                        <p>So in this example, <strong>John</strong> is actual paramerter and <strong>$name</strong> is
+                            formal parameter</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Return Value</h2>
+                        <p>
+                            Functions can return values using the return statement. The returned value can be used in
+                            other parts of the code. </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            function add($a, $b) {<br>
+                            return $a + $b;<br>
+                            }<br>
+                            $result = add(5, 3); // $result will be 8<br>
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>8</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Default Values</h2>
+                        <p>
+                            You can specify default values for function arguments. If no value is provided when calling
+                            the function, the default value is used.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            function greet($name = "Guest") {<br>
+                            echo "Hello, $name!";<br>
+                            }<br>
+                            greet(); // $result will be "Hello, Guest!"
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>Hello , Guest!</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Call by Value and Reference</h2>
+                        <p>
+                            By default, PHP uses call by value, which means function arguments are copies of the
+                            original values. To pass arguments by reference, you can use the <strong>&</strong> symbol.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            function increment($num) {<br />
+                            $num++;<br />
+                            }<br />
+                            function incrementByReference(&$num) {<br />
+                            $num++;<br />
+                            }<br />
+                            $value = 5;<br />
+                            echo "Value before function calling = $value &lt;br&gt;";<br /><br />
+                            increment($value); // $value remains 5<br /><br />
+                            echo "Value after call by value = $value &lt;br&gt;";<br/><br />
+                            incrementByReference($value); // $value becomes 6<br /><br />
+                            echo "Value after call by reference = $value &lt;br&gt;";
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Value before function calling = 5<br>
+                            value after call by value = 5<br>
+                            value after call by reference = 6
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Recursion</h2>
+                        <p>
+                            Recursion is a technique where a function calls itself. It's often used to solve problems
+                            that can be broken down into smaller, similar sub-problem.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            function factorial($n) {<br>
+                            if ($n === 0) { return 1; } <br>
+                            else { return $n * factorial($n - 1); }<br>
+                            }<br>
+                            $fact = factorial(5);<br>
+                            echo $fact;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            120
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Library Functions</h2>
+                        <p>
+                            PHP provides a wide range of built-in library functions for various tasks, such as string
+                            manipulation, file handling, and more. These functions can be used in your PHP scripts to
+                            perform common operations. For e.g.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $length = strlen("Hello, PHP!");<br />
+                            echo $length;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            11
+                        </p>
+                    </div>
+
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Functions are a fundamental part of PHP programming, allowing you to structure your code,
+                            make it reusable, and improve maintainability. By understanding function arguments, return
+                            values,  recursion, and the use of library functions, you can become a more proficient
+                            PHP developer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

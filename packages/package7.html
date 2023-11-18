@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                                Emp.java<br/>
+                                <br/>
+                        package employee;<br/>
+<br/>
+                        public class Emp {<br/>
+                            private String name;<br/>
+                            private int empID;<br/>
+                            private String category;<br/>
+                            private double basicPay;<br/>
+                            private double hra;<br/>
+                            private double da;<br/>
+                            private double netPay;<br/>
+                            private double pf;<br/>
+                            private double grossPay;<br/>
+                            private double incomeTax;<br/>
+                            private double allowance;<br/>
+                        <br/>
+                            public Emp(String name, int empID, String category, double basicPay) {<br/>
+                                this.name = name;<br/>
+                                this.empID = empID;<br/>
+                                this.category = category;<br/>
+                                this.basicPay = basicPay;<br/>
+                            }<br/>
+                        <br/>
+                            public void calculateHRA() {<br/>
+                                if (category.equals("A")) {<br/>
+                                    hra = 0.5 * basicPay;<br/>
+                                } else if (category.equals("B")) {<br/>
+                                    hra = 0.4 * basicPay;<br/>
+                                } else {<br/>
+                                    hra = 0.3 * basicPay;<br/>
+                                }<br/>
+                            }<br/>
+                        <br/>
+                            public void calculateDA() {<br/>
+                                da = 0.1 * basicPay;<br/>
+                            }<br/>
+                        <br/>
+                            public void calculateNetPay() {<br/>
+                                grossPay = basicPay + hra + da;<br/>
+                                pf = 0.12 * basicPay;<br/>
+                                incomeTax = 0.2 * grossPay;<br/>
+                                netPay = grossPay - pf - incomeTax;<br/>
+                            }<br/>
+                        <br/>
+                            public void printPayroll() {<br/>
+                                System.out.println("Employee Name: " + name);<br/>
+                                System.out.println("Employee ID: " + empID);<br/>
+                                System.out.println("Category: " + category);<br/>
+                                System.out.println("Basic Pay: " + basicPay);<br/>
+                                System.out.println("HRA: " + hra);<br/>
+                                System.out.println("DA: " + da);<br/>
+                                System.out.println("Gross Pay: " + grossPay);<br/>
+                                System.out.println("PF: " + pf);<br/>
+                                System.out.println("Income Tax: " + incomeTax);<br/>
+                                System.out.println("Net Pay: " + netPay);<br/>
+                            }<br/>
+                        }
+                                EmpPay.java<br/>
+<br/>
+                                package employee;<br/>
+<br/>
+                                public class EmpPay {<br/>
+                                    public static void main(String[] args) {<br/>
+                                        Emp e = new Emp("John Doe", 123, "A", 20000.00);<br/>
+                                        e.calculateHRA();<br/>
+                                        e.calculateDA();<br/>
+                                        e.calculateNetPay();<br/>
+                                        e.printPayroll();<br/>
+                                    }<br/>
+                                }
+                            </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./packageimg/pro7.jpg" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

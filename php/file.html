@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>File Handling</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Working with File System in PHP</h1>
+                        <h2>File Permissions</h2>
+                        <p>
+                            File permissions in PHP are essential for controlling who can access and manipulate files.
+                            Permissions include read, write, and execute permissions for the owner, group, and others.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Example: Setting file permissions<br />
+                            chmod("file.txt", 0644);
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>File Operations</h2>
+                        <p>
+                            PHP provides various functions for working with files, including opening, reading, writing,
+                            copying, renaming, deleting, and closing files
+                        </p>
+                        <p>
+                            <strong>Opening and Reading a File :</strong> To open and read a file in PHP, you can use
+                            the <strong>fopen()</strong>
+                            function to open the file and <strong>fgets()</strong> function to read its contents. Here's
+                            an example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            &lt;?php
+                            $handle=fopen("file.txt","r") or die("file is not exits");<br />
+                            while(!feof($handle))<br />
+                            {<br />
+                            echo fgets($handle);<br />
+                            echo"&lt;br&gt;";<br />
+                            }<br />
+                            fclose($handle);<br />
+                            ?>
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output :- </p>
+                    </div>
+                    <div class="image">
+                        <img src="image/file1.png" alt="file" loading="lazy">
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Writing to a File :</strong> To write data to a file in PHP, you can use the
+                            <strong>fopen()</strong> function with
+                            the "w" mode to open the file for writing and the <strong>fwrite()</strong> function to
+                            write data. Here's an
+                            example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            &lt;?php<br /><br />
+                            echo"&lt;br>----before appending into file -----&lt;br>";<br /><br />
+                            $cont=file_get_contents("file.txt");<br /><br />
+                            $imp=str_replace("\n","&lt;br>",$cont);<br /><br />
+                            echo $imp;<br /><br />
+                            $handle=fopen("file.txt","a");<br /><br />
+                            $data=&lt;&lt;&lt;mydata<br /><br />
+                            I am a Bca Student.<br /><br />
+                            Currently i am working on file handilng topic<br /><br />
+                            mydata;<br /><br />
+                            fwrite($handle,$data);<br /><br />
+                            echo"&lt;br>----after appending into file -----&lt;br>";<br /><br />
+                            $cont=file_get_contents("file.txt");<br /><br />
+                            $imp=str_replace("\n","&lt;br>",$cont);<br /><br />
+                            echo $imp;<br /><br />
+                            ?>
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="image/file2.png" alt="file" loading="lazy">
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Copying Files :</strong> You can copy files in PHP using the <strong>copy()</strong>
+                            function. It takes the source
+                            file path and the destination file path as arguments. Here's an example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            copy("source.txt", "destination.txt");
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Renaming Files :</strong> To rename a file in PHP, you can use the rename()
+                            function. It takes the current file name and the new file name as arguments. Here's an
+                            example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        rename("old_file.txt", "new_file.txt");
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong>Deleting a File :</strong> To delete a file in PHP, you can use the unlink()
+                            function. It takes the file path as an argument. Here's an example:
+                        </p>
+                    </div>
+                    <div class="example">
+                        if(unlink("file_to_delete.txt"))<br />
+                        {<br />
+                        echo "File deleted successfully";<br />
+                        }
+                    </div>
+                    <div class="output">
+                        <p>
+                            File Deleted Successfully
+                        </p>
+                    </div>
+
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Working with the file system is an essential part of many PHP applications. Understanding
+                            file permissions, file operations is crucial for building robust and functional file-based applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                           <p><a>CODEWEB</a></p> 
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                        <div class="head">
+                            <h2>CODE</h2>
+                        </div>
+                     <p>
+                        
+                        18. Create a simple AWT application design a calculator that displays buttons, TextField with GridLayout manager<br/>
+                    <br/>
+                    <br/>
+                    	Calculator.java<br/>
+                    */<br/>
+                    class Calculator extends java.awt.Frame<br/>
+                    /* implements java.awt.event.ActionListener */<br/>
+                    {<br/>
+                        /*<br/>
+                            ---------------<br/>
+                            | constructor |<br/>
+                            ---------------<br/>
+                        */<br/>
+                        Calculator()<br/>
+                        {<br/>
+                            setSize(400,500);<br/>
+                            setResizable(false);<br/>
+                            setLayout(null);<br/>
+                    <br/>
+                            add(Calculator.myField());<br/>
+                    <br/>
+                            Calculator.myButton(this,16);<br/>
+                        }<br/>
+                        /*<br/>
+                            ====================================================<br/>
+                            | myFont | get argument size and return Font<br/>
+                            ====================================================<br/>
+                        */<br/>
+                        private static java.awt.Font myFont(int size)<br/>
+                        {<br/>
+                            return new java.awt.Font("Arial",0,size);<br/>
+                        }<br/>
+                        /*<br/>
+                            ====================================================<br/>
+                            | myField | private function return TextField<br/>
+                            ====================================================<br/>
+                        */<br/>
+                        private static java.awt.TextField myField()<br/>
+                        {<br/>
+                            java.awt.TextField fld = new java.awt.TextField();<br/>
+                    <br/>
+                            fld.setBounds(0,0,400,100);<br/>
+                    <br/>
+                            fld.setEditable(true);<br/>
+                    <br/>
+                            fld.setFont(Calculator.myFont(25));<br/>
+                    <br/>
+                            fld.setForeground(java.awt.Color.BLACK);<br/>
+                    <br/>
+                            fld.setBackground(java.awt.Color.WHITE);<br/>
+                    <br/>
+                            return fld;<br/>
+                        }<br/>
+                        /*<br/>
+                            ====================================================<br/>
+                            | myButton | function arguments size or Frame<br/>
+                            ====================================================<br/>
+                        */<br/>
+                        private static void myButton(java.awt.Frame frame,int size)<br/>
+                        {<br/>
+                            java.awt.Button btn[] = new java.awt.Button[size];<br/>
+                    <br/>
+                            int x = 0, y = 100;	// default coordinates<br/>
+                    <br/>
+                            char btn_label = ' ';<br/>
+                    <br/>
+                            for (int i = 0; i < size; i++)<br/>
+                            {<br/>
+                                btn[i] = new java.awt.Button();<br/>
+                    <br/>
+                                if (i > 9)<br/>
+                                {<br/>
+                                    switch(i)<br/>
+                                    {
+                                        case 10 : btn_label = '+'; break;<br/>
+                    <br/>
+                                        case 11 : btn_label = '-'; break;<br/>
+                    <br/>
+                                        case 12 : btn_label = '*'; break;<br/>
+                    <br/>
+                                        case 13 : btn_label = '/'; break;<br/>
+                    <br/>
+                                        case 14 : btn_label = '%'; break;<br/>
+                    <br/>
+                                        default : btn_label = '=';<br/>
+                                    }<br/>
+                                    btn[i].setLabel(""+btn_label+"");<br/>
+                                }<br/>
+                                else<br/>
+                                {<br/>
+                                    btn[i].setLabel(""+i+"");<br/>
+                                }<br/>
+                    <br/>
+                                if (i != 0)<br/>
+                                {<br/>
+                                    if ((i%4) == 0)
+                                    {<br/>
+                                        x = 0;<br/>
+                                        y += 100;<br/>
+                                    }<br/>
+                                    else<br/>
+                                    {<br/>
+                                        x += 100;<br/>
+                                    }<br/>
+                                }<br/>
+                                btn[i].setBounds(x,y,100,100);<br/>
+                    <br/>
+                                Calculator.buttonStyle(btn[i],25);<br/>
+                    <br/>
+                                // btn[i].addActionListener(btn[i]);<br/>
+                    <br/>
+                                frame.add(btn[i]);<br/>
+                            }<br/>
+                        }<br/>
+                        /*<br/>
+                            ====================================================<br/>
+                            | buttonStyle | function get arugment size Button<br/>
+                            ====================================================<br/>
+                        */<br/>
+                        private static void buttonStyle(java.awt.Button btn, int size)<br/>
+                        {<br/>
+                            btn.setFont(Calculator.myFont(size));<br/>
+                            btn.setForeground(java.awt.Color.GRAY);<br/>
+                            btn.setBackground(java.awt.Color.WHITE);<br/>
+                        }<br/>
+                        /*<br/>
+                            ===================================================<br/>
+                            | buttonActionStyle | get argument size and Button<br/>
+                            ===================================================<br/>
+                        */<br/>
+                        private static void buttonActionStyle(java.awt.Button btn, int size)<br/>
+                        {<br/>
+                            btn.setFont(Calculator.myFont(size));<br/>
+                            btn.setForeground(java.awt.Color.BLACK)<br/>;
+                            btn.setBackground(java.awt.Color.WHITE);<br/>
+                        }<br/>
+                        /*<br/>
+                            @Override : ActionListener<br/>
+                        public void actionPerformed(java.awt.event.ActionEvent element)<br/>
+                        {<br/>
+                            Calculator.buttonActionStyle(this,20);<br/>
+                    <br/>
+                            System.out.println(" button "+this.getLabel());<br/>
+                        }<br/>
+                        */<br/>
+                        /*<br/>
+                            [ main function ]----------------------------------<br/>
+                        */<br/>
+                        public static void main(String args[])<br/>
+                        {<br/>
+                            System.out.println(" Calculator execute ... ");<br/>
+                    <br/>
+                            new Calculator().setVisible(true);<br/>
+                        }<br/>
+                    }<br/>
+                    // the end ---
+                        
+                     </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                                <img src="./awtimg/pro18.png" alt="image" loading="lazy">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                                <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+        </div>

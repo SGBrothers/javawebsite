@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>STRING_HANDLING</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>String Handling in PHP</h1>
+                        <h2>Creating and Accessing Strings</h2>
+                        <p>
+                            In PHP, you can create strings using single quotes ('') or double quotes (""). Accessing
+                            characters in a string is done using square brackets.<br />Example..
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $singleQuoted = 'This is a single-quoted string';<br />
+                            $doubleQuoted = "This is a double-quoted string";<br /><br />
+
+                            $character = $doubleQuoted[0];<br />
+                            echo "character is $character";
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            Output :-
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>character is T</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Characters and String Indexes</h2>
+                        <p>
+                            PHP treats strings as arrays of characters, allowing you to access individual characters by
+                            index.<br />
+                            Example...
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $str = "King";<br /><br>
+                            $firstChar = $str[0]; // 'P'<br><br>
+                            echo "first character is $firstChar";
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>first character is K</p>
+                    </div>
+                    <div class="desc">
+                        <h2>String Operators</h2>
+                        <p>
+                            PHP provides various string operators for concatenation and manipulation, such as :
+                        </p>
+                        <p>
+                            <strong>Concatenation :</strong> + and . are used for concatenation
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $str1 = "Hello";<br />
+                            $str2 = "World";<br />
+                            $combined = $str1 . " " . $str2;<br />
+                            echo $combined;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>Hello World</p>
+                    </div>
+                    <div class="desc">
+                        <p>
+                            <strong> Concatenation assignment : </strong>+= and .= are used for concatenation
+                            assignment.
+
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $str1 = "Hello";<br />
+                            $str2 = "World";<br />
+                            $str1 .= " " . $str2;<br />
+                            echo $str1;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>Hello World</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Heredoc</h2>
+                        <p>
+                            Heredoc is a way to define multi-line strings in PHP without the need for escape characters.
+                            It is particularly useful when you need to create large blocks of text or HTML content.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $variable = "PHP";<br />
+                            $heredocString =
+                            <<<EOT;<br />
+                            This is a Heredoc string. <br>
+                            It supports multiple lines and variables: {$variable}<br />
+                            EOT;<br />
+                            echo $heredocString;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            This is a Heredoc string.<br />
+                            It supports multiple lines and variables: PHP
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>String Functions</h2>
+                        <p>
+                            PHP provides a wide range of string functions to manipulate, format, and search within
+                            strings. Here are some commonly used string functions:
+                        </p>
+                        <p>
+                            <strong>strlen($str):</strong> Returns the length of the string.
+                        </p>
+                        <p>
+                            <strong>strtoupper($str):</strong> Converts the string to uppercase.
+                        </p>
+                        <p>
+                            <strong>str_replace($search, $replace, $str):</strong>
+                            Replaces all occurrences of a search string with a
+                            replacement string.
+                        </p>
+                        <p>
+                            <strong> strtolower($str): </strong>
+                            Converts the string to lowercase.
+                        </p>
+                        <p>
+                            <strong> ucfirst($str): </strong> Converts the first character of the string to uppercase
+                        </p>
+                        <p>
+                            <strong> substr($str, $start, $length): </strong>
+                            Extracts a substring from the given string.
+                        </p>
+                        <p>
+                            <strong>strpos($haystack, $needle): </strong>
+                            Searches for the position of a substring within a string.
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Formatting Strings</h2>
+                        <p>
+                            You can format strings using functions like <strong>printf</strong> and
+                            <strong>sprintf</strong> to control the output's appearance.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $name = "Alice";<br />
+                            $age = 25;<br />
+                            $message = sprintf("Name: %s, Age: %d", $name, $age);<br />
+                            echo $message;
+                        </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Name : Alice, Age: 25
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Comparing and Searching Strings</h2>
+                        <p>
+                            PHP provides functions for comparing and searching within strings, such as
+                            <strong>strcmp</strong>,<strong> strstr</strong>,
+                            <strong>strpos</strong> and <strong>str_replace</strong>.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            $haystack = "Hello, PHP!";<br />
+                            $needle = "PHP";<br />
+                            $position = strpos($haystack, $needle);<br />
+                            echo "Position = $position";
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output :- </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Position = 7;
+                        </p>
+                    </div>
+
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            String handling is a fundamental part of PHP programming, and understanding how to create,
+                            manipulate, and format strings is essential for building dynamic web applications. With the
+                            wide range of string functions available in PHP, you can perform various operations on
+                            strings to meet your application's requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

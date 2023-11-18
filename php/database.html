@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/phpstyle1.css">
+    <title>Php With Database</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="./introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left">
+                    <p>
+                        <a href="./introduction.html" target="_blank">
+                            Introduction To Php
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./basics.html" target="_blank">
+                            Php Basics
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./control.html" target="_blank">
+                            Control Structure
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./function.html" target="_blank">
+                            Functions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./string.html" target="_blank">
+                            String Handling
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./arrays.html" target="_blank">
+                            Arrays
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./forms.html" target="_blank">
+                            Forms
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./database.html" target="_blank">
+                            Php With Databases
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./cookies.html" target="_blank">
+                            Cookies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./session.html" target="_blank">
+                            Sessions
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./file.html" target="_blank">
+                            File System
+                        </a>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="desc">
+                        <h1>Integrating PHP and Databases</h1>
+                        <h2>
+                            Database Operations
+                        </h2>
+                        <p>
+                            Databases support a range of operations for managing data efficiently. Common database
+                            operations include:.
+                        </p>
+                        <p>
+                            <strong>Insertion:</strong> Adding new records to a database table.<br />
+                            <strong>Selection:</strong> Retrieving data from the database using queries.<br />
+                            <strong>Updation:</strong> Modifying existing records in the database.<br />
+                            <strong>Deletion:</strong> Removing records from the database.<br />
+                            <strong>Sorting:</strong> Arranging data in a specific order, such as ascending or
+                            descending.<br /><br/><br/>
+                            These operations are essential for maintaining and manipulating data in a database-driven
+                            application.
+                        </p>
+                    </div>
+                    <div class="desc">
+
+                        <h2>
+                            Database Packages
+                        </h2>
+                        <p>
+                            PHP offers support for various database systems through extensions like MySQLi and PDO (PHP
+                            Data Objects). These packages provide functions and classes to interact with databases,
+                            including popular database systems such as:
+                        </p>
+                        <p>
+                            <strong> MySQL:</strong> An open-source relational database management system known for its
+                            performance and ease of use.<br /><br/>
+                            <strong>SQL Server:</strong> A database management system developed by Microsoft, commonly
+                            used in enterprise environments.<br /><br/>
+                            <strong>Oracle:</strong> A widely used, enterprise-level database management system known
+                            for its robustness and scalability.
+                        </p>
+                    </div>
+                    <div class="desc">
+
+                        <h2>
+                            MySQL with PHP
+                        </h2>
+                        <p>
+                            MySQL is one of the most popular open-source relational database management systems. It is
+                            known for its performance, scalability, and ease of use. MySQL can be seamlessly integrated
+                            with PHP to create dynamic web applications. Here are some key points about using MySQL with
+                            PHP:
+                        </p>
+                        <p>
+                            <strong>Database Connectivity:</strong> PHP provides extensions like MySQLi (MySQL Improved)
+                            and PDO (PHP Data Objects) that allow you to establish connections to MySQL databases.<br /><br/>
+
+                            <strong>Query Execution:</strong> You can execute SQL queries from your PHP code to interact
+                            with the MySQL database. This includes operations like selecting, inserting, updating, and
+                            deleting records.<br /><br/>
+
+                            <strong>Fetching Data:</strong> PHP provides various functions to fetch data returned by
+                            database queries. You can use functions like mysqli_fetch_assoc() to retrieve data in an
+                            associative array format.<br /><br/>
+
+                            <strong>Security:</strong> When working with MySQL and PHP, it's essential to implement
+                            security practices such as prepared statements and input validation to prevent SQL injection
+                            attacks.<br /><br/>
+
+                            <strong>Database Administration:</strong> MySQL databases can be administered using tools
+                            like phpMyAdmin, which provide a web-based interface for managing databases, tables, and
+                            data.
+                        </p>
+                        <p>
+                            The combination of PHP and MySQL is widely used in web development due to its flexibility,
+                            performance, and robust community support. It enables the creation of dynamic, data-driven
+                            websites and applications.
+                        </p>
+                    </div>
+                    <div class="desc">
+
+                        <h2>
+                            Connecting to a Database
+                        </h2>
+                        <p>
+                            To connect to a database, you need to provide connection details such as the host, username,
+                            password, and database name. The connection can be established using functions like
+                            mysqli_connect() or PDO.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Using MySQL<br />
+                            $host = "localhost"<br />
+                            $username = "root"<br />
+                            $password = ""<br />
+                            $dbname = "mydb"<br />
+                            $conn = mysqli_connect($host, $username, $password, $dbname)<br />
+                            if($conn) <br />
+                            echo "Connected to database"<br />
+                            } else <br />
+                            echo "Error: " . mysqli_connect_error()<br />
+                            }
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <p>Output :- </p>
+                    </div>
+                    <div class="output">
+                        <p>
+                            Connected to database
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>Creating a Database and Table</h2>
+                        <P>
+                            You can use SQL queries to create databases and tables. For example, to create a database
+                            named "mydb" and a table named "users," you can execute SQL statements like:
+                        </P>
+                    </div>
+                    <div class="example">
+                        <p>
+                            // Create database<br />
+                            $sql = "CREATE DATABASE mydb";<br /><br />
+
+                            // Create table<br />
+                            $sql = "CREATE TABLE users (<br />
+                            id INT AUTO_INCREMENT PRIMARY KEY, <br />
+                            username VARCHAR(50),<br />
+                            email VARCHAR(100)<br />
+                            )";
+                        </p>
+                    </div>
+                    <div class="desc">
+                        <h2>
+                            Making and Executing Queries
+                        </h2>
+                        <p>
+                            PHP allows you to execute SQL queries to interact with the database. For example, to insert
+                            data into the "users" table:
+                        </p>
+                    </div>
+                    <div class="example">
+                        $query = "INSERT INTO users (username, email) VALUES ('john_doe',
+                        'john@example.com')";<br /><br />
+
+                        if(mysqli_query($conn, $query)){<br />
+                        echo "Record inserted successfully";<br />
+                        } else {<br />
+                        echo "Error: " . mysqli_error($conn);<br />
+                        }
+                    </div>
+                    <div class="output">
+                        <p>Record inserted successfully</p>
+                    </div>
+                    <div class="desc">
+                        <h2>Conclusion</h2>
+                        <p>
+                            Integrating PHP and databases is fundamental for creating dynamic web applications.
+                            Understanding database operations, connection methods and SQL queries
+                            with databases is essential for building robust and data-driven web solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="./image/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

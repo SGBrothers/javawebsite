@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        abstract class GeometricShape {<br/>
+                            /*<br/>
+                            Topic = Inheritence <br/>
+                            prog.no 26.write a programme to create an abstract class GeomatricShape with abstract method <br/>
+                            area() and perimeter().<br/> create subclass Triangle and Square that extends the GeomatricShape class and implement the respective methode to calculate area and perimeter of each shape.  */<br/>
+                            <br/>
+                                public abstract double area();<br/>
+                                public abstract double perimeter();<br/>
+                            }<br/>
+                            <br/>
+                             <br/>
+                            class Triangle extends GeometricShape {<br/>
+                                private double b;<br/>
+                                private double h;<br/>
+                                private double l1;<br/>
+                                private double b2;<br/>
+                                private double h3;<br/>
+                            <br/>
+                                public Triangle(double b, double h, double l1, double b2, double h3) {<br/>
+                                    this.b = b;<br/>
+                                    this.h = h;<br/>
+                                    this.l1 = l1;<br/>
+                                    this.b2 = b2;<br/>
+                                    this.h3 = h3;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double area() {<br/>
+                                    return 0.5 * b * h;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double perimeter() {<br/>
+                                    return l1+ b2 + h3;<br/>
+                                }<br/>
+                            }<br/>
+                            <br/>
+                            class Square extends GeometricShape {<br/>
+                                private double s;<br/>
+                            <br/>
+                                public Square(double s) {<br/>
+                                    this.s = s;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double area() {<br/>
+                                    return s * s;<br/>
+                                }<br/>
+                            <br/>
+                                @Override<br/>
+                                public double perimeter() {<br/>
+                                    return 4 * s;<br/>
+                                }<br/>
+                            }<br/>
+                            <br/>
+                            class Inheritence7104prog26 {<br/>
+                                public static void main(String[] args) {<br/>
+                                    Triangle t = new Triangle(6, 4, 3, 4, 5);<br/>
+                                    Square sq = new Square(4);<br/>
+                            <br/>
+                                    System.out.println("Triangle Area: " + t.area());<br/>
+                                    System.out.println("Triangle Perimeter: " + t.perimeter());<br/>
+                            <br/>
+                                    System.out.println("Square Area: " + sq.area());<br/>
+                                    System.out.println("Square Perimeter: " + sq.perimeter());<br/>
+                                }<br/>
+                            }
+                            
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./inheritanceimg/pro26.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

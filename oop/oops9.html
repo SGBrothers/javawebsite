@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        import java.text.SimpleDateFormat;<br/>
+                        import java.util.Date;<br/>
+                        <br/>
+                        // Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes,<br/>
+                         //and a method to calculate years of service.<br/>
+                        <br/>
+                        class Employee {<br/>
+                            private String name;<br/>
+                            private double salary;<br/>
+                            private Date hireDate;<br/>
+                        <br/>
+                            public Employee(String name, double salary, Date hireDate) {<br/>
+                                this.name = name;<br/>
+                                this.salary = salary;<br/>
+                                this.hireDate = hireDate;<br/>
+                            }<br/>
+                        <br/>
+                            public String getName() {<br/>
+                                return name;<br/>
+                            }<br/>
+                        <br/>
+                            public double getSalary() {
+                                return salary;
+                            }
+                        
+                            public Date getHireDate() {<br/>
+                                return hireDate;<br/>
+                            }<br/>
+                        <br/>
+                            public int calculateYearsOfService() {<br/>
+                                Date currentDate = new Date();<br/>
+                                long millisecondsInYear = 1000L * 60 * 60 * 24 * 365;<br/>
+                                long difference = currentDate.getTime() - hireDate.getTime();<br/>
+                                int years = (int) (difference / millisecondsInYear);<br/>
+                                return years;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                         class kamal7019javaOOP9 {<br/>
+                            public static void main(String[] args) {<br/>
+                                try {<br/>
+                                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");<br/>
+                                    Date hireDate = dateFormat.parse("2010-06-15");<br/>
+                                    <br/>
+                                    Employee employee = new Employee("John Doe", 60000.0, hireDate);<br/>
+                        <br/>
+                                    System.out.println("Name: " + employee.getName());<br/>
+                                    System.out.println("Salary: $" + employee.getSalary());<br/>
+                                    System.out.println("Hire Date: " + dateFormat.format(employee.getHireDate()));<br/>
+                        <br/>
+                                    int yearsOfService = employee.calculateYearsOfService();<br/>
+                                    System.out.println("Years of Service: " + yearsOfService + " years");<br/>
+                                } catch (Exception e) {<br/>
+                                    System.out.println("Error: " + e.getMessage());<br/>
+                                }<br/>
+                            }<br/>
+                        }
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro9.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

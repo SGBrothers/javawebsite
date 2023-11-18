@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        // Write a Java program to create a class called "Circle" with a radius attribute.<br/> You can access and modify this attribute.<br/> Calculate the area and circumference of the circle.<br/>
+                        class Circle {<br/>
+                            private double radius;<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public Circle(double radius) {<br/>
+                                this.radius = radius;<br/>
+                            }<br/>
+                        <br/>
+                            // Getter method for radius<br/>
+                            public double getRadius() {<br/>
+                                return radius;<br/>
+                            }<br/>
+                        <br/>
+                            // Setter method for radius<br/>
+                            public void setRadius(double radius) {<br/>
+                                this.radius = radius;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to calculate area<br/>
+                            public double calculateArea() {<br/>
+                                return Math.PI * radius * radius;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to calculate circumference<br/>
+                            public double calculateCircumference() {<br/>
+                                return 2 * Math.PI * radius;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro4 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating a circle instance<br/>
+                                Circle circle = new Circle(5.0);<br/>
+                        <br/>
+                                // Calculating area and circumference<br/>
+                                double area = circle.calculateArea();<br/>
+                                double circumference = circle.calculateCircumference();<br/>
+                        <br/>
+                                // Printing the calculated values<br/>
+                                System.out.println("Circle Area: " + area);<br/>
+                                System.out.println("Circle Circumference: " + circumference);<br/>
+                        <br/>
+                                // Modifying the radius<br/>
+                                circle.setRadius(7.0);<br/>
+                        <br/>
+                                // Recalculating area and circumference<br/>
+                                area = circle.calculateArea();<br/>
+                                circumference = circle.calculateCircumference();<br/>
+                        <br/>
+                                // Printing the updated values<br/>
+                                System.out.println("\nUpdated Circle Area: " + area);<br/>
+                                System.out.println("Updated Circle Circumference: " + circumference);<br/>
+                            }<br/>
+                        }<br/>
+                        
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro4.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

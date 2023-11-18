@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .button p{
+    border-radius: 10px;
+    display:inline-block;
+    opacity: 0;
+    padding:10px;
+    border:2px solid #35063e;
+  }
+ .button p a{
+    color:white;
+  }
+  .button p a{
+    text-decoration: none;
+  }
+.button p:hover{
+  background-color: orange;
+  color:white;
+  border:2px solid blue;
+}
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #F5E8C7;
+  }
+  .Copyright{
+    margin-top:2%;
+    width:80%;
+    font-size: 1.8rem;
+   display:flex;
+   justify-content: center;
+  }
+  .contact{
+    width:60%;
+    display:flex;
+  }
+  .content{
+    margin:2% auto 0px auto;
+    width:80vw;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:2%;
+    align-items: center;
+      border-radius: 20px;
+     background-color: #beadfa;
+  }
+  /* for output */
+  .display{
+      width:100vw;
+      margin:1% 1% 0px 1%;
+     
+      display:flex;
+      flex-direction: column;
+  }
+  .example{
+      width:90%;
+      margin:1%;
+      background-color: #F0F0F0;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding:2%;
+      font-size:1.2rem;
+  }
+  .output{
+    margin:1%;
+    width:90%;
+    background-color: #F0F0F0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:2%;
+  }
+  .head{
+    width:100%;
+    font-size:1.8rem;
+    margin-bottom: 2%;
+  }
+  .image{
+    width:50%;
+    font-size:1.2rem;
+    color:white;
+    padding:1%;
+    margin:0px  auto 2% auto;
+  }
+  .image img{
+    width:100%;
+    transition: all 0.8s linear;
+  }
+  .image img:hover{
+    transform: scale(1.2);
+    margin-bottom: 2%;
+  }
+  .foot{
+    width:100vw;
+    margin-top:1%;
+    background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );  display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:20px;
+  }
+  .foot p{
+    color:white;
+    font-weight: bold;
+  }
+  .linkedin
+  {
+    width:46%;
+    display:flex; 
+    margin:2%;
+    display:flex;
+    justify-content: center;
+  }
+  .linkedin .left{
+    width: 40%;
+    margin-right:10px;
+  }
+  .linkedin .left img{
+    width:80%;
+    border-radius: 4px;
+  }
+  .linkedin .right{
+    width:40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .linkedin .right p{
+   font-size: 1.8rem;
+  }
+  .linkedin .right p a{
+    text-decoration: none;
+    color:white;
+  }
+  .left{
+    width:85%;
+  }
+  .navconatiner {
+    width: 100vw;
+    background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );
+  }
+  
+  #navlist {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.3rem;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    min-height: 80px;
+  }
+  .text{
+    width:100%;
+    /* border-radius: 20px; */
+    /* background-color: #beadfa; */
+    color: #35063e;
+    display: flex;
+  gap:10px;
+  min-height:70px;
+  align-items: center;
+  padding: 1%;
+  font-weight: bold;
+  }
+  .text:hover{
+    box-shadow: 0px 0px 10px 6px #7743db;
+    border-radius: 4px;
+  
+  }
+  .text p{
+    font-size:1.4rem;
+  }
+  .text:hover .button p{
+    opacity: 1;
+  }
+  @media (max-width:800px)
+  {
+    .text p{
+      font-size:1.2rem;
+    }
+  }
+  ul#navlist a {
+    text-decoration: none;
+    margin: 40px;
+    color: white;
+    transition:border-bottom 0.4s linear 0.2s;
+  }
+  #navlist li div a:hover
+  {
+   border-bottom:4px solid #FFFB73;
+    
+  }
+  @media (max-width: 870px) {
+    #navlist {
+      font-size: 1.5rem;
+    }
+    ul#navlist a {
+      text-decoration: none;
+      margin: 20px;
+    }
+  }
+  @media (max-width: 850px) {
+    .foot p{
+      font-size:1.2rem;
+    }
+    .linkedin .right p{
+      font-size: 1rem;
+     }
+  }
+  @media (max-width: 690px) {
+   .example , .output{
+    font-size:0.8rem;
+   }
+   #navlist {
+    font-size: 1.2rem;
+  }
+  ul#navlist a {
+    text-decoration: none;
+    margin: 14px;
+  }
+  }
+  @media (max-width: 450px) {
+    .example , .output{
+     font-size:0.6rem;
+    }
+    #navlist {
+      font-size: 1rem;
+    }
+    ul#navlist a {
+      text-decoration: none;
+      margin: 10px;
+    }
+    .foot p{
+      font-size:1rem;
+    }
+    .linkedin .right p{
+      font-size: 0.8rem;
+     }
+   }

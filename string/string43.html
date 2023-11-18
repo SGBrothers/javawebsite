@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                   <p>
+                   
+                    import java.util.Scanner;<br/>
+<br/>
+                    class CharacterSwapper {<br/>
+                        public static void main(String[] args) {<br/>
+                            Scanner scanner = new Scanner(System.in);<br/>
+                    <br/>
+                            
+                            System.out.print("\nEnter a string: ");<br/>
+                            String userString = scanner.nextLine();<br/>
+                    <br/>
+                            System.out.print("Enter the first character to swap: ");<br/>
+                            char charToSwap1 = scanner.next().charAt(0);<br/>
+                    <br/>
+                            System.out.print("Enter the second character to swap: ");<br/>
+                            char charToSwap2 = scanner.next().charAt(0);<br/>
+                    <br/>
+                            
+                            if (userString.contains(String.valueOf(charToSwap1)) && userString.contains(String.valueOf(charToSwap2))) {<br/>
+                                <br/>
+                                String resultString = swapCharacters(userString, charToSwap1, charToSwap2);<br/>
+                                System.out.println("Original string: " + userString);<br/>
+                                System.out.println("String after swapping characters: " + resultString);<br/>
+                            } else {<br/>
+                                System.out.println("Error: At least one of the characters is not present in the input string.");<br/>
+                            }<br/>
+                        }<br/>
+                    <br/>
+                        private static String swapCharacters(String inputString, char char1, char char2) {<br/>
+                            StringBuilder swappedString = new StringBuilder();<br/>
+                            for (char ch : inputString.toCharArray()) {<br/>
+                                if (ch == char1) {<br/>
+                                    swappedString.append(char2);<br/>
+                                } else if (ch == char2) {<br/>
+                                    swappedString.append(char1);<br/>
+                                } else {<br/>
+                                    swappedString.append(ch);<br/>
+                                }<br/>
+                            }<br/>
+                            return swappedString.toString();<br/>
+                        }<br/>
+                    }  
+</p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./stringimg/pro43.png" alt="image" loading="lazy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>

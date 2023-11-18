@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #F5E8C7;
+}
+.Copyright{
+  margin-top:2%;
+  width:80%;
+  font-size: 1.8rem;
+ display:flex;
+ justify-content: center;
+}
+.contact{
+  width:60%;
+  display:flex;
+}
+.content
+{
+  width:100vw;
+  display:flex;
+justify-content: space-between;
+  padding:1% 1% 0px 1%;
+}
+.content .left
+{
+  width:26%;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  font-size: 1.8rem;
+  background-color: #ECE3CE; 
+  font-weight: bold;
+  padding:1% 0px 1% 0px;
+  box-shadow:0px 0px 4px  #9A4444;
+}
+.content .left p{
+  width: 100%;
+  text-align: center;
+}
+.content .left p a{
+ text-decoration: none;
+ color:#363062;
+ color:#7743DB;
+ color:#363062;
+
+}
+.content .right{
+  width:72%;
+  padding:1%;
+  background-color: #ECE3CE; 
+  box-shadow:0px 0px 4px  #9A4444;
+}
+.desc{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  margin-bottom: 2%;
+  margin-top:2%;
+}
+.desc p{
+  font-size:1.6rem;
+  color:#7743DB; 
+  /* color:#363062 ;  */
+  color:#190482;
+ 
+}
+.example{
+  background-color: #beadfa;
+   color:#001B79;
+   font-size: 1.6rem;
+   width:80%;
+   padding:2%;
+   border-radius: 4px;
+}
+
+.foot{
+  width:100vw;
+  margin-top:1%;
+  background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );  display:flex;
+  flex-direction: column;
+  align-items:center;
+  gap:20px;
+}
+.foot p{
+  color:white;
+  font-weight: bold;
+}
+h1,h2{
+  color:#363062;
+  /* color:#7743DB; */
+  font-size:2rem;
+}
+.image{
+  width:40%;
+  margin:2%;
+}
+.image img{
+  width:100%;
+  border-radius: 5px;
+}
+.linkedin
+{
+  width:46%;
+  display:flex; 
+  margin:2%;
+  display:flex;
+  justify-content: center;
+}
+.linkedin .left{
+  width: 40%;
+  margin-right:10px;
+}
+.linkedin .left img{
+  width:80%;
+  border-radius: 4px;
+}
+.linkedin .right{
+  width:40%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.linkedin .right p{
+ font-size: 1.8rem;
+}
+.linkedin .right p a{
+  text-decoration: none;
+  color:white;
+}
+.left{
+  width:85%;
+}
+.navconatiner {
+  width: 100vw;
+  background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );
+}
+
+#navlist {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.3rem;
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  min-height: 80px;
+}
+.output{
+  padding:1%;
+  min-height:100px;
+  background-color: #7752FE;
+  color:white;
+  margin-top:2%;
+  font-size:1.6rem;
+  width:60%;
+  border-radius: 4px;
+}
+ul#navlist a {
+  text-decoration: none;
+  margin: 40px;
+  color: white;
+  transition:border-bottom 0.4s linear 0.2s;
+}
+#navlist li div a:hover
+{
+ border-bottom:4px solid #FFFB73;
+  
+}
+@media (max-width: 814px) {
+  .content .left{
+    font-size:1.5rem;
+  }
+  .desc p{
+    font-size:1.3rem;
+  }
+  h1,h2{
+    font-size:1.5rem;
+  }
+  .output, .example{
+    font-size:1.3rem;
+  }
+}
+@media (max-width:630px)
+{
+  .content .left{
+    font-size:1.1rem;
+  }
+  .desc p{
+    font-size:1rem;
+  }
+  h1,h2{
+    font-size:1.1rem;
+  }
+  .output, .example{
+    font-size:1rem;
+  }
+}
+@media (max-width:480px)
+{
+  .content .left{
+    font-size:0.9rem;
+  }
+  .desc p{
+    font-size:0.8rem;
+  }
+  h1,h2{
+    font-size:0.9rem;
+  }
+  .output, .example{
+    font-size:0.5rem;
+  }
+}
+@media (max-width: 870px) {
+  #navlist {
+    font-size: 1.5rem;
+  }
+  ul#navlist a {
+    text-decoration: none;
+    margin: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .foot p{
+    font-size:1.2rem;
+  }
+  .linkedin .right p{
+    font-size: 1rem;
+   }
+}
+@media (max-width: 690px) {
+ #navlist {
+  font-size: 1.2rem;
+}
+ul#navlist a {
+  text-decoration: none;
+  margin: 14px;
+}
+}
+@media (max-width: 450px) {
+  #navlist {
+    font-size: 1rem;
+  }
+  ul#navlist a {
+    text-decoration: none;
+    margin: 10px;
+  }
+  .foot p{
+    font-size:1rem;
+  }
+  .linkedin .right p{
+    font-size: 0.8rem;
+   }
+ }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/small.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Code - Output</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navconatiner">
+                <nav>
+                    <ul id="navlist">
+                        <li>
+                            <p><a>CODEWEB</a></p>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="../index.html" target="_blank">HOME</a>
+                                <a href="../php/introduction.html" target="_blank">PHP</a>
+                                <a href="#one">CONTACT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="display">
+                <div class="example">
+                    <div class="head">
+                        <h2>CODE</h2>
+                    </div>
+                    <p>
+                        
+                        class TrafficLight {<br/>
+                            private String color;<br/>
+                            private int duration; // Duration in seconds<br/>
+                        <br/>
+                            // Constructor<br/>
+                            public TrafficLight(String color, int duration) {<br/>
+                                this.color = color;<br/>
+                                this.duration = duration;<br/>
+                            }<br/>
+                        <br/>
+                            // Method to change the color of the traffic light<br/>
+                            public void changeColor(String newColor, int newDuration) {<br/>
+                                this.color = newColor;<br/>
+                                this.duration = newDuration;<br/>
+                                System.out.println("Traffic light changed to " + newColor + " for " + newDuration + " seconds.");<br/>
+                            }<br/>
+                        <br/>
+                            // Method to check if the light is red<br/>
+                            public boolean isRed() {<br/>
+                                return color.equalsIgnoreCase("red");<br/>
+                            }<br/>
+                        <br/>
+                            // Method to check if the light is green<br/>
+                            public boolean isGreen() {<br/>
+                                return color.equalsIgnoreCase("green");<br/>
+                            }<br/>
+                        <br/>
+                            // Getter methods<br/>
+                            public String getColor() {<br/>
+                                return color;<br/>
+                            }<br/>
+                        <br/>
+                            public int getDuration() {<br/>
+                                return duration;<br/>
+                            }<br/>
+                        }<br/>
+                        <br/>
+                        public class pro8 {<br/>
+                            public static void main(String[] args) {<br/>
+                                // Creating a TrafficLight instance<br/>
+                                TrafficLight trafficLight = new TrafficLight("red", 30);<br/>
+                        <br/>
+                                // Checking initial light color and duration<br/>
+                                System.out.println("Initial Traffic Light Color: " + trafficLight.getColor());<br/>
+                                System.out.println("Initial Duration: " + trafficLight.getDuration() + " seconds");<br/>
+                        <br/>
+                                // Changing the color and duration of the traffic light<br/>
+                                trafficLight.changeColor("green", 45);<br/>
+                        <br/>
+                                // Checking if the light is red or green<br/>
+                                if (trafficLight.isRed()) {<br/>
+                                    System.out.println("Traffic light is currently red.");<br/>
+                                } else if (trafficLight.isGreen()) {<br/>
+                                    System.out.println("Traffic light is currently green.");<br/>
+                                } else {<br/>
+                                    System.out.println("Traffic light is neither red nor green.");<br/>
+                                }<br/>
+                            }<br/>
+                        }
+                        
+                        
+                    </p>
+                </div>
+                <div class="output">
+                    <div class="head">
+                        <h2>OUTPUT</h2>
+                    </div>
+                    <div class="image">
+                        <p>
+                            <img src="./oopsimg/pro8.png" alt="image" loading="lazy">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot" id="one">
+                <div class="Copyright">
+                    <p>Copyright &copy; CodeWeb 2023 All rights are Reserved </p>
+                </div>
+                <div class="contact">
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/linkedin.jpg" alt="linkedin_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="https://www.linkedin.com/in/sourav-kumar-61362821a/"
+                                    target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+                    <div class="linkedin">
+                        <div class="left">
+                            <img src="../images/gmail.png" alt="Gmail_image" loading="lazy">
+                        </div>
+                        <div class="right">
+                            <p><a href="mailto:sk2856150@gmail.com" target="_blank">Email</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
